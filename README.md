@@ -17,9 +17,14 @@ Everything you type is stored in your own browser via `localStorage` and never l
 
 ### GitHub Pages
 
-1. Push this repo to GitHub.
-2. **Settings → Pages → Source: Deploy from a branch → `main` / `root`.**
-3. It goes live at `https://<username>.github.io/<repo>/` in a minute or so.
+Already wired up. `.github/workflows/pages.yml` publishes the repo root on every
+push to `main`, and turns Pages on by itself the first time it runs — there is
+nothing to click. The site is live at
+<https://madele-theron.github.io/car-planner/>.
+
+To deploy a fork instead, push it to GitHub and the same workflow does the rest.
+You can also run it by hand from **Actions → Deploy to GitHub Pages → Run
+workflow**.
 
 ### Vercel
 

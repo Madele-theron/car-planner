@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Car Planner</title>
+<meta name="description" content="Two tools for buying a used car in South Africa: a field checklist and a live finance model.">
+<meta name="theme-color" content="#0B6E5F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%9A%97</text></svg>">
+<style>
+  :root {
+    --ground:#F4F7F5; --surface:#FFFFFF; --ink:#101E1C; --ink-muted:#556764;
+    --ink-faint:#849693; --accent:#0B6E5F; --accent-ink:#FFFFFF; --accent-soft:#DDEDE8;
+    --hairline:#D6E0DC; --shadow:0 1px 2px rgba(16,30,28,.06), 0 8px 24px -12px rgba(16,30,28,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#0C1514; --surface:#14201E; --ink:#E7EDEB; --ink-muted:#93A5A1;
+      --ink-faint:#6B7C79; --accent:#46BCA2; --accent-ink:#06201B; --accent-soft:#17302B;
+      --hairline:#253430; --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#0C1514; --surface:#14201E; --ink:#E7EDEB; --ink-muted:#93A5A1;
+    --ink-faint:#6B7C79; --accent:#46BCA2; --accent-ink:#06201B; --accent-soft:#17302B;
+    --hairline:#253430; --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+  * { box-sizing:border-box; }
+  body {
+    background:var(--ground); color:var(--ink); margin:0;
+    font-family:"Public Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size:16px; line-height:1.5; -webkit-text-size-adjust:100%;
+    min-height:100vh; display:flex; align-items:center; justify-content:center; padding:2rem 1.1rem;
+  }
+  main { max-width:34rem; width:100%; }
+  .eyebrow {
+    font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:.66rem;
+    font-weight:500; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--accent); margin:0 0 .55rem;
+  }
+  h1 {
+    font-family:"Archivo", ui-sans-serif, system-ui, sans-serif;
+    font-size:clamp(2rem,8vw,2.8rem); font-weight:700; letter-spacing:-.03em;
+    line-height:1.02; margin:0 0 .7rem; text-wrap:balance;
+  }
+  p.lede { color:var(--ink-muted); margin:0 0 2rem; }
+  a.card {
+    display:block; text-decoration:none; color:inherit;
+    background:var(--surface); border:1px solid var(--hairline);
+    border-left:3px solid var(--accent); border-radius:5px;
+    padding:1.05rem 1.1rem; box-shadow:var(--shadow); margin-bottom:.75rem;
+  }
+  a.card:hover { border-left-width:6px; }
+  a.card:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+  a.card h2 {
+    font-family:"Archivo", sans-serif; font-size:1.15rem; font-weight:700;
+    letter-spacing:-.02em; margin:0 0 .25rem;
+  }
+  a.card p { margin:0; font-size:.9rem; color:var(--ink-muted); }
+  footer {
+    margin-top:2rem; padding-top:1rem; border-top:1px solid var(--hairline);
+    font-size:.78rem; color:var(--ink-faint);
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">South Africa</p>
+  <h1>Car Planner</h1>
+  <p class="lede">Two tools for buying a used car without getting talked into a bad deal.</p>
+
+  <a class="card" href="model.html">
+    <h2>Car Money Model &rarr;</h2>
+    <p>Drag your savings, deposit, rate and payment. See every purchase month's loan, minimum instalment, headroom and total cost at once.</p>
+  </a>
+
+  <a class="card" href="kit.html">
+    <h2>Car Hunt Kit &rarr;</h2>
+    <p>Listing checks, the hill and mileage tests, questions to ask the dealer, drive-away costs, and what to confirm before you sign.</p>
+  </a>
+
+  <footer>
+    <p>Everything you type stays in this browser. Nothing is sent anywhere, and there is no account, server or database.</p>
+  </footer>
+</main>
+</body>
+</html>

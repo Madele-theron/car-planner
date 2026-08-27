@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Car Hunt Kit</title>
+<meta name="description" content="Field checklist for buying a used car in South Africa: listing checks, hill and mileage tests, dealer questions, drive-away costs.">
+<meta name="theme-color" content="#0B6E5F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%9A%97</text></svg>">
+<style>
+  /* ---- tokens: light (default, un-stamped) ---- */
+  :root {
+    --ground:      #F4F7F5;
+    --surface:     #FFFFFF;
+    --surface-2:   #EDF2EF;
+    --ink:         #101E1C;
+    --ink-muted:   #556764;
+    --ink-faint:   #849693;
+    --accent:      #0B6E5F;
+    --accent-ink:  #FFFFFF;
+    --accent-soft: #DDEDE8;
+    --signal:      #A8481A;
+    --signal-soft: #F6E5DB;
+    --hairline:    #D6E0DC;
+    --hairline-2:  #C2D0CB;
+    --shadow:      0 1px 2px rgba(16,30,28,.06), 0 8px 24px -12px rgba(16,30,28,.18);
+  }
+
+  /* ---- tokens: dark via OS preference (only when no explicit light choice) ---- */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:      #0C1514;
+      --surface:     #14201E;
+      --surface-2:   #1B2926;
+      --ink:         #E7EDEB;
+      --ink-muted:   #93A5A1;
+      --ink-faint:   #6B7C79;
+      --accent:      #46BCA2;
+      --accent-ink:  #06201B;
+      --accent-soft: #17302B;
+      --signal:      #E39159;
+      --signal-soft: #2E2119;
+      --hairline:    #253430;
+      --hairline-2:  #33443F;
+      --shadow:      0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+
+  /* ---- tokens: dark via explicit choice ---- */
+  :root[data-theme="dark"] {
+    --ground:      #0C1514;
+    --surface:     #14201E;
+    --surface-2:   #1B2926;
+    --ink:         #E7EDEB;
+    --ink-muted:   #93A5A1;
+    --ink-faint:   #6B7C79;
+    --accent:      #46BCA2;
+    --accent-ink:  #06201B;
+    --accent-soft: #17302B;
+    --signal:      #E39159;
+    --signal-soft: #2E2119;
+    --hairline:    #253430;
+    --hairline-2:  #33443F;
+    --shadow:      0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0 0 4rem;
+  }
+
+  .wrap {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 0 1.1rem;
+  }
+
+  /* ---------- sticky anchor bar ---------- */
+  .anchor {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-bottom: 1px solid var(--accent);
+  }
+  .anchor-inner {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: .55rem 1.1rem .6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+  }
+  .anchor-cell { min-width: 0; }
+  .anchor-k {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .565rem;
+    font-weight: 500;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    opacity: .78;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .anchor-v {
+    font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.02rem;
+    font-weight: 700;
+    letter-spacing: -.015em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+  }
+  .anchor-v small { font-size: .62em; font-weight: 500; opacity: .8; }
+
+  /* ---------- masthead ---------- */
+  header.mast { padding: 2.1rem 0 1.6rem; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .66rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 .55rem;
+  }
+  h1 {
+    font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1.95rem, 8vw, 2.7rem);
+    font-weight: 700;
+    letter-spacing: -.03em;
+    line-height: 1.02;
+    text-wrap: balance;
+    margin: 0 0 .7rem;
+  }
+  .standfirst {
+    color: var(--ink-muted);
+    font-size: 1rem;
+    max-width: 34rem;
+    margin: 0;
+  }
+
+  /* ---------- sections ---------- */
+  section { margin-top: 2.4rem; }
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: .6rem;
+    padding-bottom: .55rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 2px solid var(--ink);
+  }
+  h2 {
+    font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.15;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .sec-note {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .62rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+  h3 {
+    font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
+    font-size: .93rem;
+    font-weight: 600;
+    letter-spacing: .005em;
+    margin: 1.6rem 0 .55rem;
+  }
+  h3:first-child { margin-top: 0; }
+  p { margin: 0 0 .85rem; }
+  p:last-child { margin-bottom: 0; }
+  .lede { color: var(--ink-muted); }
+
+  /* ---------- cards ---------- */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 1.05rem 1.1rem;
+    box-shadow: var(--shadow);
+  }
+  .card + .card { margin-top: .8rem; }
+
+  .flag {
+    background: var(--signal-soft);
+    border: 1px solid var(--signal);
+    border-radius: 4px;
+    padding: .9rem 1rem;
+    margin: 1rem 0;
+  }
+  .flag .flag-k {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .62rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--signal);
+    display: block;
+    margin-bottom: .3rem;
+  }
+  .flag p { font-size: .93rem; }
+
+  .note {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: .85rem 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+    font-size: .93rem;
+  }
+  .note strong { color: var(--accent); }
+
+  /* ---------- money split ---------- */
+  .split { display: grid; gap: .5rem; margin-bottom: 1rem; }
+  @media (min-width: 34rem) { .split { grid-template-columns: repeat(3, 1fr); } }
+  .split-cell {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-top: 3px solid var(--accent);
+    border-radius: 3px;
+    padding: .75rem .85rem;
+  }
+  .split-cell.hold { border-top-color: var(--signal); }
+  .split-k {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .6rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    display: block;
+  }
+  .split-v {
+    display: block;
+    font-family: "Archivo", sans-serif;
+    font-size: 1.42rem;
+    font-weight: 700;
+    letter-spacing: -.025em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.25;
+    margin: .05rem 0 .15rem;
+  }
+  .split-d { display: block; font-size: .78rem; color: var(--ink-muted); line-height: 1.35; }
+
+  /* ---------- tables ---------- */
+  .scroller { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 4px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .87rem;
+    background: var(--surface);
+    min-width: 27rem;
+  }
+  caption {
+    text-align: left;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .62rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding-bottom: .45rem;
+  }
+  th, td {
+    text-align: left;
+    padding: .5rem .6rem;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+  }
+  thead th {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .6rem;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--hairline-2);
+    white-space: nowrap;
+  }
+  td.num, th.num {
+    text-align: right;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tr.total td {
+    border-top: 2px solid var(--ink);
+    border-bottom: none;
+    font-weight: 600;
+    background: var(--surface-2);
+  }
+  tr.sub td {
+    border-top: 1px solid var(--hairline-2);
+    font-weight: 600;
+  }
+  td .why { display: block; color: var(--ink-muted); font-size: .8rem; margin-top: .1rem; }
+
+  /* ---------- checklist ---------- */
+  ul.checks { list-style: none; margin: 0; padding: 0; }
+  ul.checks li { border-bottom: 1px solid var(--hairline); }
+  ul.checks li:last-child { border-bottom: none; }
+  ul.checks label {
+    display: flex;
+    align-items: flex-start;
+    gap: .7rem;
+    padding: .72rem .2rem;
+    cursor: pointer;
+    min-height: 44px;
+  }
+  ul.checks input {
+    appearance: none;
+    -webkit-appearance: none;
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    margin: .18rem 0 0;
+    border: 1.5px solid var(--hairline-2);
+    border-radius: 3px;
+    background: var(--surface);
+    cursor: pointer;
+    position: relative;
+  }
+  ul.checks input:checked {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  ul.checks input:checked::after {
+    content: "";
+    position: absolute;
+    left: 6px; top: 2px;
+    width: 5px; height: 10px;
+    border: solid var(--accent-ink);
+    border-width: 0 2px 2px 0;
+    transform: rotate(43deg);
+  }
+  ul.checks input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  ul.checks .txt { font-size: .93rem; line-height: 1.45; }
+  ul.checks input:checked ~ .txt { color: var(--ink-faint); text-decoration: line-through; }
+  ul.checks .txt em { font-style: normal; color: var(--ink-muted); display: block; font-size: .82rem; }
+  ul.checks input:checked ~ .txt em { color: var(--ink-faint); }
+
+  .reset {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .62rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid var(--hairline-2);
+    color: var(--ink-muted);
+    border-radius: 3px;
+    padding: .4rem .6rem;
+    cursor: pointer;
+    margin-top: .9rem;
+  }
+  .reset:hover { border-color: var(--accent); color: var(--accent); }
+  .reset:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- calculator ---------- */
+  .calc {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-top: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 1.05rem 1.1rem;
+    box-shadow: var(--shadow);
+  }
+  .calc-fields { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+  .calc label {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .6rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    display: block;
+    margin-bottom: .25rem;
+  }
+  .calc input {
+    width: 100%;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+    padding: .55rem .6rem;
+    border: 1px solid var(--hairline-2);
+    border-radius: 3px;
+    background: var(--ground);
+    color: var(--ink);
+    min-height: 44px;
+  }
+  .calc input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+  .calc-out {
+    margin-top: .9rem;
+    padding-top: .9rem;
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    align-items: baseline;
+    gap: .6rem;
+    flex-wrap: wrap;
+  }
+  .calc-num {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .calc-unit { font-family: "IBM Plex Mono", monospace; font-size: .68rem; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-faint); }
+  .verdict {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    padding: .3rem .55rem;
+    border-radius: 3px;
+    margin-left: auto;
+  }
+  .v-good { background: var(--accent); color: var(--accent-ink); }
+  .v-ok   { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
+  .v-bad  { background: var(--signal); color: var(--ground); }
+  .v-none { background: var(--surface-2); color: var(--ink-faint); }
+  .bands {
+    margin-top: .85rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .7rem;
+    color: var(--ink-muted);
+    display: grid;
+    gap: .18rem;
+  }
+  .bands b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- misc ---------- */
+  ul.plain { margin: 0 0 .9rem; padding-left: 1.1rem; }
+  ul.plain li { margin-bottom: .35rem; font-size: .95rem; }
+  ul.plain li:last-child { margin-bottom: 0; }
+  .rand { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; font-weight: 500; }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--hairline);
+    color: var(--ink-faint);
+    font-size: .8rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<p style="max-width:54rem;margin:0 auto;padding:1rem 1.1rem 0"><a href="index.html" style="font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);text-decoration:none">&larr; Car Planner</a></p>
+
+
+<div class="anchor">
+  <div class="anchor-inner">
+    <div class="anchor-cell">
+      <span class="anchor-k">Target price</span>
+      <span class="anchor-v">R190<small>–200k</small></span>
+    </div>
+    <div class="anchor-cell">
+      <span class="anchor-k">Pay monthly</span>
+      <span class="anchor-v">R3 000</span>
+    </div>
+    <div class="anchor-cell">
+      <span class="anchor-k">Cash on the day</span>
+      <span class="anchor-v">R14 000</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="mast">
+    <p class="eyebrow">Field kit</p>
+    <h1>Car Hunt Kit</h1>
+    <p class="standfirst">Everything to check before you favourite a listing, what the drive-away cash actually is, and the numbers to hold onto when someone at a desk tries to move them.</p>
+  </header>
+
+  <!-- ============ MONEY ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>Where the deposit goes</h2>
+      <span class="sec-note">Fixed</span>
+    </div>
+
+    <div class="split">
+      <div class="split-cell">
+        <span class="split-k">Deposit</span>
+        <span class="split-v">R71 000</span>
+        <span class="split-d">About 36% down on a R200k car. No balloon.</span>
+      </div>
+      <div class="split-cell">
+        <span class="split-k">Setup costs</span>
+        <span class="split-v">R14 000</span>
+        <span class="split-d">Inspection, fees, registration, insurance, first tank.</span>
+      </div>
+      <div class="split-cell hold">
+        <span class="split-k">Emergency fund</span>
+        <span class="split-v">R30 000</span>
+        <span class="split-d">Untouched. This is not deposit money.</span>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>The rule:</strong> to shrink the loan by R10 000, negotiate R10 000 off the price — never take it out of the emergency fund. Same loan, same instalment, same interest. One version costs you nothing.
+    </div>
+
+    <div class="scroller">
+      <table>
+        <caption>What the finance looks like · ~13% · 72-month term</caption>
+        <thead>
+          <tr>
+            <th>Car price</th>
+            <th class="num">Financed</th>
+            <th class="num">Minimum</th>
+            <th class="num">Paying R3 000</th>
+            <th class="num">Interest</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>R200 000</td>
+            <td class="num">R129 000</td>
+            <td class="num">R2 590</td>
+            <td class="num">58 months</td>
+            <td class="num">R45 600</td>
+          </tr>
+          <tr>
+            <td><strong>R190 000</strong></td>
+            <td class="num">R119 000</td>
+            <td class="num">R2 390</td>
+            <td class="num">52 months</td>
+            <td class="num">R37 400</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="lede" style="margin-top:.8rem;font-size:.88rem">Sign the 72-month term for the low minimum, then pay R3 000 by fixed debit order. Same interest as a 52-month term, but if income ever wobbles your legal obligation is only R2 390.</p>
+  </section>
+
+  <!-- ============ DRIVE-AWAY CASH ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>Cash to drive away</h2>
+      <span class="sec-note">R200k car</span>
+    </div>
+
+    <div class="scroller">
+      <table>
+        <caption>Once-off — excludes the car price and the monthly instalment</caption>
+        <thead>
+          <tr><th>Item</th><th class="num">Low</th><th class="num">High</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DEKRA / AA pre-purchase inspection<span class="why">The first money you spend, before you commit. Best value in the whole process — and you may pay it twice if the first car fails.</span></td>
+            <td class="num">1 000</td><td class="num">1 500</td>
+          </tr>
+          <tr>
+            <td>Bank initiation fee<span class="why">Capped by the NCA at R1 050 + VAT. Pay it cash — don't finance it.</span></td>
+            <td class="num">1 207</td><td class="num">1 207</td>
+          </tr>
+          <tr>
+            <td>Dealer admin / "on the road" fee<span class="why">Mostly profit. Your biggest variable and the most negotiable line here.</span></td>
+            <td class="num">1 500</td><td class="num">5 000</td>
+          </tr>
+          <tr>
+            <td>Delivery from another branch<span class="why">Avoid it — buy from a branch you can drive to.</span></td>
+            <td class="num">0</td><td class="num">3 500</td>
+          </tr>
+          <tr>
+            <td>Registration / change of ownership<span class="why">Varies by province. Doing it yourself is cheapest.</span></td>
+            <td class="num">250</td><td class="num">500</td>
+          </tr>
+          <tr>
+            <td>Licence disc<span class="why">Only if the seller's disc expires soon.</span></td>
+            <td class="num">0</td><td class="num">700</td>
+          </tr>
+          <tr>
+            <td>Roadworthy certificate<span class="why">Dealers normally include this. A private seller won't.</span></td>
+            <td class="num">0</td><td class="num">1 000</td>
+          </tr>
+          <tr>
+            <td>First month's insurance<span class="why">Hard gate — the bank won't release funds without proof of cover.</span></td>
+            <td class="num">800</td><td class="num">900</td>
+          </tr>
+          <tr>
+            <td>Tracker installation<span class="why">Only if your insurer requires one. Subscription is monthly, on top.</span></td>
+            <td class="num">0</td><td class="num">1 500</td>
+          </tr>
+          <tr>
+            <td>First full tank<span class="why">Cars are handed over close to empty.</span></td>
+            <td class="num">700</td><td class="num">800</td>
+          </tr>
+          <tr class="sub">
+            <td>To physically drive away</td>
+            <td class="num">5 460</td><td class="num">16 610</td>
+          </tr>
+          <tr>
+            <td>Insurance excess buffer<span class="why">Hold it, don't spend it. Your excess is R1 500.</span></td>
+            <td class="num">1 500</td><td class="num">1 500</td>
+          </tr>
+          <tr>
+            <td>First-six-weeks contingency<span class="why">Tyres, a skipped service, a battery. There is always something.</span></td>
+            <td class="num">3 000</td><td class="num">5 000</td>
+          </tr>
+          <tr class="total">
+            <td>Have ready</td>
+            <td class="num">9 960</td><td class="num">23 110</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note"><strong>Plan on R14 000.</strong> The spread is almost entirely the dealer admin fee and whether delivery and a roadworthy are on you. Ask for both numbers <em>before</em> you commit to a car — they're quotable and they're negotiable.</div>
+  </section>
+
+  <!-- ============ HILL TEST ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>The hill test</h2>
+      <span class="sec-note">Nm ÷ tonne</span>
+    </div>
+    <p class="lede">Engine size doesn't predict hill behaviour — torque against weight does. Both numbers are in every listing's spec tab.</p>
+
+    <div class="calc">
+      <div class="calc-fields">
+        <div>
+          <label for="nm">Torque (Nm)</label>
+          <input id="nm" type="number" inputmode="decimal" placeholder="113" value="113">
+        </div>
+        <div>
+          <label for="kg">Kerb weight (kg)</label>
+          <input id="kg" type="number" inputmode="decimal" placeholder="890" value="890">
+        </div>
+      </div>
+      <div class="calc-out">
+        <span class="calc-num" id="ratio">127</span>
+        <span class="calc-unit">Nm / tonne</span>
+        <span class="verdict v-good" id="verdict">Fine</span>
+      </div>
+      <div class="bands">
+        <span><b>Under 115</b> — struggles, aircon on and loaded</span>
+        <span><b>115–125</b> — marginal, you'll notice it</span>
+        <span><b>125–135</b> — fine in normal driving</span>
+        <span><b>135+</b> — pulls up hills without downshifting</span>
+      </div>
+    </div>
+
+    <div class="flag">
+      <span class="flag-k">Hard no</span>
+      <p><strong>AMT gearboxes.</strong> Badged <strong>AGS</strong> (Suzuki), <strong>Easy-R</strong> (Renault / Datsun), or just <strong>AMT</strong>. An automated manual hesitates and lurches going uphill — the worst possible transmission for your one stated problem. Manual is best; a proper auto or CVT is fine.</p>
+    </div>
+
+    <div class="note"><strong>Shortcut:</strong> any 1.0 turbo beats a bigger naturally-aspirated engine on hills. Look for <strong>TSI</strong>, <strong>TCe</strong>, <strong>T-GDI</strong>, or "turbo" in the title.</div>
+  </section>
+
+  <!-- ============ MILEAGE TEST ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>The mileage test</h2>
+      <span class="sec-note">km ÷ year</span>
+    </div>
+    <p class="lede">Raw odometer numbers mean nothing without the age. 90 000 km on a 2018 is unremarkable; on a 2024 it's a rental fleet car.</p>
+
+    <div class="calc">
+      <div class="calc-fields">
+        <div>
+          <label for="year">Model year</label>
+          <input id="year" type="number" inputmode="numeric" placeholder="2022" value="2022">
+        </div>
+        <div>
+          <label for="odo">Odometer (km)</label>
+          <input id="odo" type="number" inputmode="numeric" placeholder="62000" value="62000">
+        </div>
+      </div>
+      <div class="calc-out">
+        <span class="calc-num" id="kmratio">—</span>
+        <span class="calc-unit">km / year</span>
+        <span class="verdict v-none" id="kmverdict">—</span>
+      </div>
+      <div class="bands">
+        <span><b>Under 8 000</b> — suspiciously low, see below</span>
+        <span><b>8 000–15 000</b> — low and healthy</span>
+        <span><b>15 000–25 000</b> — normal SA average</span>
+        <span><b>25 000–35 000</b> — high, expect more wear</span>
+        <span><b>35 000+</b> — almost certainly ex-rental or a rep car</span>
+      </div>
+      <p style="margin-top:.85rem;font-size:.8rem;color:var(--ink-muted)" id="kmage">Age is estimated from the model year, so treat it as approximate — check the registration date on the papers.</p>
+    </div>
+
+    <div class="flag">
+      <span class="flag-k">The counter-intuitive one</span>
+      <p><strong>Very low mileage isn't automatically good.</strong> A car that stood for long stretches, or only ever did short cold trips, can be in worse shape than a high-mileage highway car — perished seals, tired battery, oil never reaching temperature, brake discs pitted with rust. If it's under 8 000 km/year, ask <em>why</em>, and check the service history was still done on time intervals rather than km.</p>
+    </div>
+  </section>
+
+  <!-- ============ LISTING SCREEN ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>Before you favourite it</h2>
+      <span class="sec-note">30 seconds</span>
+    </div>
+    <ul class="checks" data-list="listing">
+      <li><label><input type="checkbox"><span class="txt">Torque ÷ weight is <strong>125 Nm/t or better</strong></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Not an AMT / AGS / Easy-R</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Claimed fuel use under <strong>6.5 L/100km</strong><em>Add 15–20% for real-world driving</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">km ÷ years lands between <strong>8 000 and 30 000</strong><em>Above that, likely ex-rental. Below it, long standing and short trips.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Ad says <strong>"full service history"</strong> in those words<em>"Service history available" is vaguer. No mention means none.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Service plan or factory warranty still running<em>The single biggest swing in your monthly budget — R500 vs R2 000</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Three previous owners or fewer</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Code 2, not Code 3<em>Code 3 is a rebuilt write-off — hard to insure, hard to finance, poor resale</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt"><strong>2020 or newer</strong><em>Banks won't finance a car older than ~10 years at the end of a 72-month term</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">10+ photos, including engine bay and interior</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Tyres in the photos match each other and have tread</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Insurance quoted online before you get attached<em>Some models are theft targets and carry much higher premiums</em></span></label></li>
+    </ul>
+    <button class="reset" data-reset="listing" type="button">Clear these checks</button>
+  </section>
+
+  <!-- ============ TEST DRIVE ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>On the test drive</h2>
+      <span class="sec-note">In person</span>
+    </div>
+
+    <div class="note"><strong>The one that matters most:</strong> find a real hill, put the aircon on full, and take a passenger. That's the exact condition an underpowered car hides from the spec sheet. If it's fine like that, it's fine.</div>
+
+    <ul class="checks" data-list="drive">
+      <li><label><input type="checkbox"><span class="txt">Drove up a genuine hill, aircon on, with a passenger</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Started it from stone cold and listened<em>Ask them not to warm it up before you arrive</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">No warning lights left on the dash after startup</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Brakes: no pulling, no grinding, pedal isn't spongy</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Tracks straight on a flat road, no vibration at 100–120</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Aircon blows genuinely cold, not just air</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Every window, lock, indicator, wiper and light works</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Tyres: same brand, tread above the wear bars, wearing evenly<em>Uneven wear means alignment or suspension trouble</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Spare wheel, jack and wheel spanner are actually in the boot</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Service book stamps match what the ad claimed</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">VIN on the car matches the VIN on the paperwork</span></label></li>
+    </ul>
+    <button class="reset" data-reset="drive" type="button">Clear these checks</button>
+  </section>
+
+  <!-- ============ QUESTIONS ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>Questions to ask</h2>
+      <span class="sec-note">Tick as you go</span>
+    </div>
+    <p class="lede">Ask these out loud, and watch <em>how</em> they answer as much as what they say. A dealer who knows the car's history will tell you readily. Vagueness on a car they've owned for weeks is the answer.</p>
+
+    <h3>About the car's past</h3>
+    <ul class="checks" data-list="ask-past">
+      <li><label><input type="checkbox"><span class="txt">"Where did this car come from?"<em>Trade-in, auction, bank repossession, ex-rental or ex-fleet. Auction and rental cars come with no known history — that's not a dealbreaker, but it should change the price.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"How long has it been on your floor?"<em>Past 60 days and it isn't selling. That's your leverage — a car sitting on finance costs them money every week.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"Can I see the service book?"<em>Ask to see it, not whether it exists. Check the stamps line up with the km intervals and that no service was skipped.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"Has it been in an accident? Do you have a condition report?"<em>Most reputable dealers have a DEKRA or AA report on file. Reluctance here is meaningful.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"What work have you done to it since you took it in?"<em>Tells you what was wrong when it arrived. "Nothing, it was perfect" is rarely true.</em></span></label></li>
+    </ul>
+
+    <h3>About what you're inheriting</h3>
+    <ul class="checks" data-list="ask-inherit">
+      <li><label><input type="checkbox"><span class="txt">"Is the service plan still valid, and does it transfer to me?"<em>Some plans need a transfer fee or don't move to a new owner at all. This is the R500-vs-R2 000 line in your budget — get it confirmed in writing.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"When is the next service due?"<em>If it's due in 2 000 km, that's R2 000–R4 000 landing on you in a month. Ask them to service it before handover.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"Is the cambelt due, or is it a timing chain?"<em>A cambelt replacement runs R6 000–R10 000 and is typically due around 90 000–120 000 km. If it's near, that's a price negotiation, not a surprise for later.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"Are there two keys?"<em>A replacement key for a modern car is R2 000–R4 000. One key means budget for a second, or ask them to supply it.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"When does the licence disc expire?"<em>Decides whether the R400–R700 renewal is yours this month or next year.</em></span></label></li>
+    </ul>
+
+    <h3>About the money</h3>
+    <ul class="checks" data-list="ask-money">
+      <li><label><input type="checkbox"><span class="txt">"What's the out-the-door price, with every fee included?"<em>The only number that matters. Ask for it in writing before you discuss anything else.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"What exactly does the admin fee cover?"<em>Often the honest answer is "nothing specific". That's when it becomes negotiable.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"Are the roadworthy and change of ownership included?"<em>Two separate line items that quietly appear at signing if you don't ask.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"Is the car here, or does it need to come from another branch?"<em>Delivery can be R3 500. Worth knowing before you fall for it.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">"What's your best price if I <strong>don't</strong> finance through you?"<em>Reveals whether the price assumes they earn a commission on your finance. Sometimes it moves the number.</em></span></label></li>
+    </ul>
+
+    <div class="flag">
+      <span class="flag-k">The one that decides it</span>
+      <p><strong>"Can I take it to my own mechanic for a pre-purchase inspection?"</strong></p>
+      <p style="margin-bottom:0">The answer matters more than the report. A confident dealer says yes without blinking. Hesitation, excuses, or "our technicians have already checked it" is a walk-away — not because the car is definitely bad, but because you'll never know. An independent DEKRA or AA inspection runs about <span class="rand">R1 000–R1 500</span> and is the best money in this entire process. It's the first line in your drive-away table — and budget to pay it twice if the first car you inspect fails.</p>
+    </div>
+
+    <button class="reset" data-reset="ask-past,ask-inherit,ask-money" type="button">Clear these checks</button>
+  </section>
+
+  <!-- ============ DEALERSHIP ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>At the desk</h2>
+      <span class="sec-note">Negotiating</span>
+    </div>
+
+    <div class="flag">
+      <span class="flag-k">Never do this</span>
+      <p><strong>Don't tell them your monthly budget.</strong> Say "R3 000 a month" and they'll hit it — by stretching the term and quietly leaving the price where it is. Negotiate the <strong>price of the car</strong>, always. The instalment is an output, not the thing you're buying.</p>
+    </div>
+
+    <ul class="checks" data-list="desk">
+      <li><label><input type="checkbox"><span class="txt">Pre-approval letter in hand <em>before</em> talking numbers<em>You're a fast, certain sale with 36% down. That's worth money to them.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Asked for money off the <strong>price</strong>, not extras thrown in</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Asked what the admin fee covers, and asked them to drop it</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Declined paint protection and dent cover</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Declined tyre &amp; rim insurance</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Declined shortfall / gap cover<em>With 36% down you're never underwater. You don't need it.</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Extended warranty: only considered if the factory plan is nearly done</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Let their F&amp;I desk quote — but only to beat what you already have</span></label></li>
+    </ul>
+    <button class="reset" data-reset="desk" type="button">Clear these checks</button>
+  </section>
+
+  <!-- ============ BEFORE SIGNING ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>Before you sign</h2>
+      <span class="sec-note">Contract</span>
+    </div>
+
+    <div class="flag">
+      <span class="flag-k">Makes or breaks the plan</span>
+      <p><strong>Get it in writing that extra payments reduce capital.</strong> Many banks default to treating overpayment as paying instalments <em>in advance</em> — your account shows "paid ahead", you feel great, and interest keeps accruing on the full balance. Then check your statement after month two to confirm the capital actually dropped by more than scheduled.</p>
+    </div>
+
+    <ul class="checks" data-list="sign">
+      <li><label><input type="checkbox"><span class="txt">Extra payments reduce <strong>capital</strong> — confirmed in writing</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Rate is <strong>linked</strong>, not fixed<em>Better for an overpayer, and you benefit from rate cuts</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">No early settlement penalty<em>Under the NCA you're financing well below R250k, so there shouldn't be one — check anyway</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt"><strong>No balloon.</strong> Confirmed in writing.</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Read the total cost of credit figure on the quote<em>It's the number that tells you what the car really costs</em></span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Know whether the R69–R80 monthly service fee is inside or outside the instalment</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Credit life insurance — is it bundled? What does it cost?</span></label></li>
+      <li><label><input type="checkbox"><span class="txt">Set the R3 000 as a <strong>fixed debit order</strong>, not a manual top-up</span></label></li>
+    </ul>
+    <button class="reset" data-reset="sign" type="button">Clear these checks</button>
+  </section>
+
+  <!-- ============ RATE ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>Your rate, realistically</h2>
+      <span class="sec-note">Thin file</span>
+    </div>
+
+    <div class="card">
+      <p>A middling score with <strong>no previous loans</strong> isn't a bad score — it's a <em>thin file</em>. The number reflects an absence of evidence, not bad behaviour. Credit scores reward demonstrated repayment history, and paying cash for a previous car means none was ever generated.</p>
+      <p>Practically, expect roughly <strong>prime + 2% to prime + 3.5%</strong> rather than the best-tier rate. Confirm the current prime rate when you apply — it moves.</p>
+      <p style="margin-bottom:0">Your <strong>36% deposit is the thing that offsets it.</strong> Loan-to-value is a major input, and no balloon plus a big deposit makes you a low-risk application regardless of file thickness.</p>
+    </div>
+
+    <h3>What actually helps, in order</h3>
+    <ul class="plain">
+      <li><strong>Pull your free credit reports first.</strong> One free report a year from each bureau — TransUnion, Experian, Compuscan, XDS. Errors are common and a dispute takes a week or two. Do this before any application.</li>
+      <li><strong>Apply to your own bank first.</strong> They can see years of your salary and spending, which partly substitutes for the missing loan history. A stranger bank can't.</li>
+      <li><strong>Keep applications inside one fortnight.</strong> Spread over months they read as distress; clustered they read as normal rate-shopping. With a thin file, don't apply to six places.</li>
+      <li><strong>Don't let the approval amount move your target.</strong> They'll likely approve more than R129 000. That's what they'll lend, not what you should spend.</li>
+    </ul>
+
+    <div class="note"><strong>Have ready:</strong> SA ID · last 3 payslips · 3 months' bank statements · proof of residence under 3 months old · driver's licence.</div>
+  </section>
+
+  <!-- ============ SHORTLIST ============ -->
+  <section>
+    <div class="sec-head">
+      <h2>Worth filtering for</h2>
+      <span class="sec-note">R185–200k</span>
+    </div>
+    <div class="scroller">
+      <table>
+        <caption>Variant matters — the notes say which</caption>
+        <thead><tr><th>Model</th><th>Why it's here</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Toyota Starlet 1.5</strong></td><td>More torque than the Swift, strong resale, Toyota service network</td></tr>
+          <tr><td><strong>Suzuki Baleno 1.5</strong></td><td>Literally the same car as the Starlet, usually cheaper for the badge</td></tr>
+          <tr><td><strong>Suzuki Swift 1.2</strong></td><td>Efficient, cheap to run, low theft risk. Adequate rather than strong on hills.</td></tr>
+          <tr><td><strong>VW Polo 1.0 TSI</strong></td><td>Best of these on hills — turbo torque low down. Quote the insurance first; it's a theft target.</td></tr>
+          <tr><td><strong>VW Polo Vivo 1.6</strong></td><td>Everywhere in SA, so parts and mechanics are cheap and easy. <strong>Take the 1.6</strong> (~139 Nm/t) — the 1.4 is marginal at ~121 and you'd feel it on hills. Heavier and thirstier than the Swift, and one of the country's most-stolen cars, so get the insurance quote before you get attached.</td></tr>
+          <tr><td><strong>Ford Figo 1.5</strong></td><td>Strong on hills, less fashionable, so often better value</td></tr>
+          <tr><td><strong>Kia Picanto / Hyundai Grand i10</strong></td><td>Get the <strong>1.2</strong>, never the 1.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="flag">
+      <span class="flag-k">Careful with</span>
+      <p><strong>Renault Kwid and Datsun Go.</strong> Cheap and very light, but weak crash-test results and unpleasant on hills — the two things you specifically care about.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Worked through on a R190k&ndash;R200k car with roughly R85 000 available, an emergency fund held back, and R3 000 a month going in. Rates and fees are estimates — confirm the current prime rate, the initiation fee cap, and provincial registration costs when you apply.</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var KEY = "carhuntkit.v1";
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+  }
+
+  function save(state) {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* private mode, blocked storage */ }
+  }
+
+  var state = load();
+  if (!state || typeof state !== "object") { state = {}; }
+
+  var lists = document.querySelectorAll("ul.checks");
+  Array.prototype.forEach.call(lists, function (list) {
+    var name = list.getAttribute("data-list");
+    var boxes = list.querySelectorAll('input[type="checkbox"]');
+
+    Array.prototype.forEach.call(boxes, function (box, i) {
+      var id = name + ":" + i;
+      if (state[id] === true) { box.checked = true; }
+      box.addEventListener("change", function () {
+        if (box.checked) { state[id] = true; } else { delete state[id]; }
+        save(state);
+      });
+    });
+  });
+
+  var resets = document.querySelectorAll("[data-reset]");
+  Array.prototype.forEach.call(resets, function (btn) {
+    btn.addEventListener("click", function () {
+      var names = btn.getAttribute("data-reset").split(",");
+      names.forEach(function (name) {
+        var list = document.querySelector('ul.checks[data-list="' + name + '"]');
+        if (!list) { return; }
+        var boxes = list.querySelectorAll('input[type="checkbox"]');
+        Array.prototype.forEach.call(boxes, function (box, i) {
+          box.checked = false;
+          delete state[name + ":" + i];
+        });
+      });
+      save(state);
+    });
+  });
+
+  // ---- hill test ----
+  var nm = document.getElementById("nm");
+  var kg = document.getElementById("kg");
+  var out = document.getElementById("ratio");
+  var verdict = document.getElementById("verdict");
+
+  function grade() {
+    var t = parseFloat(nm.value);
+    var w = parseFloat(kg.value);
+
+    if (!isFinite(t) || !isFinite(w) || t <= 0 || w <= 0) {
+      out.textContent = "—";
+      verdict.textContent = "Enter both";
+      verdict.className = "verdict v-none";
+      return;
+    }
+
+    var r = t / (w / 1000);
+    out.textContent = Math.round(r);
+
+    if (r < 115)      { verdict.textContent = "Struggles"; verdict.className = "verdict v-bad"; }
+    else if (r < 125) { verdict.textContent = "Marginal";  verdict.className = "verdict v-ok";  }
+    else if (r < 135) { verdict.textContent = "Fine";      verdict.className = "verdict v-good"; }
+    else              { verdict.textContent = "Comfortable"; verdict.className = "verdict v-good"; }
+  }
+
+  nm.addEventListener("input", grade);
+  kg.addEventListener("input", grade);
+  grade();
+
+  // ---- mileage test ----
+  var yr = document.getElementById("year");
+  var odo = document.getElementById("odo");
+  var kmOut = document.getElementById("kmratio");
+  var kmVerdict = document.getElementById("kmverdict");
+  var kmAge = document.getElementById("kmage");
+
+  var AGE_NOTE = "Age is estimated from the model year, so treat it as approximate — check the registration date on the papers.";
+
+  function spaced(n) {
+    // 16350 -> "16 350"
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
+  function mileage() {
+    var now = new Date();
+    var nowDec = now.getFullYear() + (now.getMonth() + 1) / 12;
+
+    var y = parseFloat(yr.value);
+    var d = parseFloat(odo.value);
+
+    if (!isFinite(y) || !isFinite(d) || d < 0 || y < 1950 || y > now.getFullYear() + 1) {
+      kmOut.textContent = "—";
+      kmVerdict.textContent = "Enter both";
+      kmVerdict.className = "verdict v-none";
+      kmAge.textContent = AGE_NOTE;
+      return;
+    }
+
+    var age = nowDec - y;
+    if (age < 0.5) { age = 0.5; }
+
+    var perYear = d / age;
+    kmOut.textContent = spaced(Math.round(perYear));
+
+    if (perYear < 8000)       { kmVerdict.textContent = "Very low";  kmVerdict.className = "verdict v-ok"; }
+    else if (perYear < 15000) { kmVerdict.textContent = "Healthy";   kmVerdict.className = "verdict v-good"; }
+    else if (perYear < 25000) { kmVerdict.textContent = "Normal";    kmVerdict.className = "verdict v-good"; }
+    else if (perYear < 35000) { kmVerdict.textContent = "High";      kmVerdict.className = "verdict v-ok"; }
+    else                      { kmVerdict.textContent = "Ex-fleet";  kmVerdict.className = "verdict v-bad"; }
+
+    kmAge.textContent = "About " + age.toFixed(1) + " years old. " + AGE_NOTE;
+  }
+
+  yr.addEventListener("input", mileage);
+  odo.addEventListener("input", mileage);
+  mileage();
+})();
+</script>
+
+</body>
+</html>

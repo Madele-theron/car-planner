@@ -1,14 +1,15 @@
 # Car Planner
 
-Two static pages for buying a used car in South Africa.
+Static pages for buying a used car in South Africa.
 
 - **`model.html`** — a live finance model. Drag your cash, monthly saving, Uber drain, car price, drive-away costs, interest rate and monthly payment, and see every purchase month's loan, minimum instalment, headroom, payoff period and total cost of credit at once. Compares a personal loan (with credit life at R3 per R1,000 of outstanding balance) against secured vehicle finance side by side.
+- **`paydown.html`** — a debt paydown model. Once you have the loan, drag the extra you pay each month (and any lump sum) and watch the interest, the term and the debt-free date move. Breaks the cost of credit into interest, credit life, service fees and initiation, plots the falling balance against the minimum-only case, and lays out a ladder of extra amounts side by side.
 - **`kit.html`** — a field checklist. Listing screens, the hill test (Nm ÷ tonne), the mileage test (km ÷ year), questions to ask a dealer, drive-away costs, and what to confirm before signing.
-- **`index.html`** — a small landing page linking the two.
+- **`index.html`** — a small landing page linking them.
 
 ## No backend
 
-There is no server, database, build step or dependency. Three HTML files with inline CSS and vanilla JavaScript. The only external request is to Google Fonts.
+There is no server, database, build step or dependency. Four HTML files with inline CSS and vanilla JavaScript. The only external request is to Google Fonts.
 
 Everything you type is stored in your own browser via `localStorage` and never leaves the device. There is no account and nothing is transmitted anywhere.
 
@@ -34,12 +35,20 @@ Open the deployed URL, then **Share → Add to Home Screen**. It opens full-scre
 
 ## Changing the defaults
 
-The starting values live in one place near the top of the script in `model.html`:
+The starting values live in one place near the top of the script in each page. In `model.html`:
 
 ```js
 var DEFAULTS = { cash:85000, contrib:6000, raid:2000, price:190000, setup:14000,
                  rate:13.4, pay:3000, salary:30000, prod:"loan", sel:3 };
 ```
+
+And in `paydown.html`:
+
+```js
+var DEFAULTS = { loan:130000, rate:13.4, term:72, extra:500, lump:0, lumpat:6, prod:"loan" };
+```
+
+`paydown.html` also has a **Pull my numbers from the Money Model** button, which appears only when you have used `model.html` on that device. It reads the loan, rate and loan type the model works out for the purchase month you selected there.
 
 Anything you change in the browser is remembered on that device, so you only need to edit this if you want different values on a fresh device. **Reset to defaults** restores them.
 

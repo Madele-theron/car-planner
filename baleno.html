@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Monday: Baleno viewing</title>
+<meta name="description" content="Phone-first viewing checklist, dealer questions with answer notes, and live calculators for the 2024 Suzuki Baleno 1.5 GLX manual.">
+<meta name="theme-color" content="#0B6E5F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%9A%97</text></svg>">
+<style>
+  :root {
+    --ground:#F4F7F5; --surface:#FFFFFF; --surface-2:#EDF2EF; --ink:#101E1C; --ink-muted:#556764;
+    --ink-faint:#849693; --accent:#0B6E5F; --accent-ink:#FFFFFF; --accent-soft:#DDEDE8;
+    --signal:#A8481A; --signal-soft:#F6E5DB; --bad:#B3261E; --bad-soft:#F9E1DE;
+    --hairline:#D6E0DC; --hairline-2:#C2D0CB;
+    --yellow:#FFE680; --yellow-ink:#2A2300; --yellow-edge:#C9A800;
+    --shadow:0 1px 2px rgba(16,30,28,.06), 0 8px 24px -12px rgba(16,30,28,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#0C1514; --surface:#14201E; --surface-2:#1B2926; --ink:#E7EDEB; --ink-muted:#93A5A1;
+      --ink-faint:#6B7C79; --accent:#46BCA2; --accent-ink:#06201B; --accent-soft:#17302B;
+      --signal:#E39159; --signal-soft:#2E2119; --bad:#FF8A80; --bad-soft:#3A1A17;
+      --hairline:#253430; --hairline-2:#33443F;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#0C1514; --surface:#14201E; --surface-2:#1B2926; --ink:#E7EDEB; --ink-muted:#93A5A1;
+    --ink-faint:#6B7C79; --accent:#46BCA2; --accent-ink:#06201B; --accent-soft:#17302B;
+    --signal:#E39159; --signal-soft:#2E2119; --bad:#FF8A80; --bad-soft:#3A1A17;
+    --hairline:#253430; --hairline-2:#33443F;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+  * { box-sizing:border-box; }
+  html { scroll-padding-top:6.2rem; }
+  body {
+    background:var(--ground); color:var(--ink); margin:0; padding:0 0 5rem;
+    font-family:"Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size:16px; line-height:1.5; -webkit-text-size-adjust:100%;
+  }
+  .wrap { max-width:46rem; margin:0 auto; padding:0 1rem; }
+  a { color:var(--accent); }
+
+  /* sticky bar */
+  .bar { position:sticky; top:0; z-index:30; background:var(--accent); color:var(--accent-ink); }
+  .bar-in { max-width:46rem; margin:0 auto; padding:.5rem 1rem; display:flex; align-items:center; gap:.6rem; }
+  .bar a.back { color:var(--accent-ink); text-decoration:none; font-weight:600; font-size:.9rem; }
+  .bar .prog { font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:.72rem; letter-spacing:.04em; margin-left:auto; white-space:nowrap; }
+  .pill {
+    font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:.66rem; letter-spacing:.04em;
+    border:1px solid currentColor; border-radius:99px; padding:.2rem .6rem; background:transparent;
+    color:inherit; cursor:pointer; white-space:nowrap; min-height:28px;
+  }
+  .chips { background:var(--surface); border-bottom:1px solid var(--hairline); }
+  .chips-in { max-width:46rem; margin:0 auto; padding:.4rem 1rem; display:flex; gap:.4rem; overflow-x:auto; scrollbar-width:none; }
+  .chips-in a {
+    flex:0 0 auto; text-decoration:none; font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:.72rem; color:var(--ink-muted); border:1px solid var(--hairline-2); border-radius:99px;
+    padding:.35rem .7rem; min-height:32px; display:inline-flex; align-items:center;
+  }
+
+  header.mast { padding:1.6rem 0 1rem; }
+  .eyebrow { font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:.66rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 .5rem; }
+  h1 { font-family:"Archivo", ui-sans-serif, system-ui, sans-serif; font-size:clamp(1.8rem,8vw,2.5rem); font-weight:700; letter-spacing:-.03em; line-height:1.04; margin:0 0 .6rem; text-wrap:balance; }
+  .standfirst { color:var(--ink-muted); margin:0; }
+  h2 { font-family:"Archivo", ui-sans-serif, system-ui, sans-serif; font-size:1.25rem; font-weight:700; letter-spacing:-.02em; line-height:1.15; margin:0; text-wrap:balance; }
+  h3 { font-family:"Archivo", ui-sans-serif, system-ui, sans-serif; font-size:.95rem; font-weight:600; margin:1.3rem 0 .4rem; color:var(--accent); }
+  p { margin:0 0 .8rem; } p:last-child { margin-bottom:0; }
+  section { margin-top:2.2rem; }
+  .sec-head { padding-bottom:.5rem; margin-bottom:.8rem; border-bottom:2px solid var(--ink); display:flex; align-items:baseline; gap:.6rem; }
+  .sec-head .cnt { margin-left:auto; font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:.66rem; color:var(--ink-faint); white-space:nowrap; }
+  .intro { color:var(--ink-muted); font-size:.92rem; }
+
+  .card { background:var(--surface); border:1px solid var(--hairline); border-radius:5px; padding:.95rem 1rem; box-shadow:var(--shadow); }
+  .rule { background:var(--signal-soft); border:2px solid var(--signal); border-radius:5px; padding:.9rem 1rem; margin:1rem 0; }
+  .rule b { font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--signal); display:block; margin-bottom:.3rem; }
+  .rule p { font-weight:600; }
+  .walk { background:var(--bad-soft); border:2px solid var(--bad); border-radius:5px; padding:.5rem .8rem .8rem; }
+  .walk .row { border-color:var(--bad); }
+  .keys { display:grid; grid-template-columns:1fr; gap:.45rem; margin:0; padding:0; list-style:none; font-size:.93rem; }
+  .keys li { padding-left:1rem; position:relative; }
+  .keys li::before { content:""; position:absolute; left:0; top:.6em; width:.4rem; height:.4rem; background:var(--accent); border-radius:50%; }
+
+  /* rows */
+  .row { border-bottom:1px solid var(--hairline); padding:.15rem 0; }
+  .row:last-child { border-bottom:0; }
+  .line { display:flex; align-items:flex-start; gap:.3rem; }
+  label.chk { flex:1; display:flex; align-items:flex-start; gap:.7rem; padding:.6rem .1rem; min-height:48px; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+  label.chk input { position:absolute; opacity:0; width:1px; height:1px; }
+  .box { flex:0 0 auto; width:28px; height:28px; border:2px solid var(--hairline-2); border-radius:6px; background:var(--surface); margin-top:1px; display:grid; place-items:center; }
+  .box::after { content:""; width:12px; height:7px; border-left:3px solid var(--accent-ink); border-bottom:3px solid var(--accent-ink); transform:rotate(-45deg) translate(1px,-1px); opacity:0; }
+  label.chk input:checked + .box { background:var(--accent); border-color:var(--accent); }
+  label.chk input:checked + .box::after { opacity:1; }
+  label.chk input:focus-visible + .box { outline:3px solid var(--accent); outline-offset:2px; }
+  .walk label.chk input:checked + .box { background:var(--bad); border-color:var(--bad); }
+  .walk .box { border-color:var(--bad); }
+  .txt { flex:1; min-width:0; }
+  label.chk input:checked ~ .txt { color:var(--ink-muted); }
+  .qtag { font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:.6rem; font-weight:600; letter-spacing:.08em; color:var(--accent); border:1px solid var(--accent); border-radius:3px; padding:0 .3rem; margin-right:.4rem; vertical-align:2px; }
+  .nb { flex:0 0 auto; width:44px; height:44px; border:1px solid var(--hairline-2); background:var(--surface); color:var(--ink-muted); border-radius:6px; font-size:1.05rem; cursor:pointer; position:relative; margin-top:2px; }
+  .nb.has { color:var(--accent); border-color:var(--accent); }
+  .nb.has::after { content:""; position:absolute; top:5px; right:5px; width:8px; height:8px; border-radius:50%; background:var(--accent); }
+  .notewrap { padding:0 0 .6rem 2.4rem; }
+  textarea, input[type=text], input[type=number], input[type=month], input[type=password] {
+    width:100%; font:inherit; font-size:16px; color:var(--ink); background:var(--surface-2);
+    border:1px solid var(--hairline-2); border-radius:5px; padding:.6rem .7rem; min-height:44px;
+  }
+  textarea { resize:vertical; min-height:4.2rem; }
+  .sec-notes { margin-top:.9rem; }
+  .sec-notes > summary, details.fold > summary { cursor:pointer; font-weight:600; min-height:44px; display:flex; align-items:center; gap:.5rem; }
+  .sec-notes > summary { font-size:.9rem; color:var(--accent); }
+  details.fold { background:var(--surface); border:1px solid var(--hairline); border-radius:5px; padding:0 1rem; margin-top:.8rem; }
+  details.fold[open] { padding-bottom:1rem; }
+  details.fold > summary { font-family:"Archivo", sans-serif; font-size:1.05rem; }
+  .prompt { font-weight:500; margin:.9rem 0 .35rem; }
+
+  /* buttons */
+  .btn { font:inherit; font-weight:600; font-size:.95rem; min-height:48px; padding:.6rem 1rem; border-radius:6px; border:1px solid var(--accent); background:var(--accent); color:var(--accent-ink); cursor:pointer; }
+  .btn.ghost { background:transparent; color:var(--accent); }
+  .btn.danger { background:transparent; color:var(--bad); border-color:var(--bad); }
+  .btn.sm { min-height:40px; padding:.35rem .8rem; font-size:.85rem; }
+  .btn-row { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1rem; }
+  .btn-row .btn { flex:1 1 9rem; }
+
+  /* calculators */
+  .calc { margin-top:1rem; }
+  .fgrid { display:grid; grid-template-columns:1fr 1fr; gap:.7rem .8rem; }
+  .f label { display:block; font-size:.74rem; color:var(--ink-muted); margin-bottom:.2rem; line-height:1.25; }
+  .calc input[type=number], .calc input[type=month], .calc input[type=text].y {
+    background:var(--yellow); color:var(--yellow-ink); border:1px solid var(--yellow-edge); font-variant-numeric:tabular-nums; font-weight:600;
+  }
+  .res { margin-top:1rem; border-top:1px solid var(--hairline); }
+  .res div { display:flex; justify-content:space-between; gap:1rem; padding:.45rem 0; border-bottom:1px solid var(--hairline); font-size:.93rem; }
+  .res div span:last-child { font-family:"IBM Plex Mono", ui-monospace, monospace; font-weight:600; text-align:right; font-variant-numeric:tabular-nums; }
+  .res .big { font-size:1.05rem; }
+  .res .neg span:last-child { color:var(--bad); }
+  .res .pos span:last-child { color:var(--accent); }
+  .tiny { font-size:.8rem; color:var(--ink-muted); }
+  table.mini { width:100%; border-collapse:collapse; font-size:.82rem; margin-top:.8rem; font-variant-numeric:tabular-nums; }
+  table.mini th, table.mini td { text-align:right; padding:.4rem .3rem; border-bottom:1px solid var(--hairline); }
+  table.mini th:first-child, table.mini td:first-child { text-align:left; }
+  table.mini th { font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:.62rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); font-weight:500; }
+  .neg-text { color:var(--bad); font-weight:600; }
+  .c3row { padding:.6rem 0; border-bottom:1px solid var(--hairline); }
+  .c3row .lab { font-size:.9rem; font-weight:500; }
+  .c3row .why { font-size:.76rem; color:var(--ink-muted); margin:.1rem 0 .35rem; }
+  .c3row .two { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; }
+  .c3row .two small { display:block; font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:.58rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:.15rem; }
+  .c3tot { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; padding:.55rem 0; border-bottom:1px solid var(--hairline); }
+  .c3tot .lab { grid-column:1 / -1; font-weight:600; font-size:.9rem; }
+  .c3tot .v { font-family:"IBM Plex Mono", ui-monospace, monospace; font-weight:600; font-size:1.05rem; }
+  .c3tot.big .v { color:var(--accent); font-size:1.15rem; }
+  .scn { display:flex; align-items:center; gap:.5rem; padding:.5rem 0; border-bottom:1px solid var(--hairline); }
+  .scn .nm { flex:1; min-width:0; } .scn .nm b { display:block; } .scn .nm span { font-size:.78rem; color:var(--ink-muted); }
+
+  .contact a { display:block; text-decoration:none; padding:.6rem 0; border-bottom:1px solid var(--hairline); color:var(--ink); min-height:48px; }
+  .contact a:last-child { border-bottom:0; }
+  .contact a b { color:var(--accent); font-family:"IBM Plex Mono", ui-monospace, monospace; }
+  .msg { margin-top:1rem; }
+  .msg h4 { margin:0 0 .35rem; font-family:"Archivo", sans-serif; font-size:.95rem; }
+  .msg textarea { min-height:9rem; }
+  .msg .btn { margin-top:.5rem; width:100%; }
+  ul.plain { margin:.3rem 0 0; padding-left:1.2rem; } ul.plain li { margin-bottom:.4rem; }
+  .toast { position:fixed; left:50%; bottom:1.2rem; transform:translateX(-50%); background:var(--ink); color:var(--ground); padding:.7rem 1.1rem; border-radius:99px; font-size:.9rem; z-index:50; opacity:0; pointer-events:none; transition:opacity .2s; max-width:90vw; text-align:center; }
+  .toast.on { opacity:1; }
+  .syncmsg { font-size:.85rem; min-height:1.3em; margin-top:.6rem; color:var(--ink-muted); }
+  .syncmsg.bad { color:var(--bad); }
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="bar-in">
+  <a class="back" href="kit.html">&larr; Kit</a>
+  <button class="pill" id="syncPill" type="button">Saved on this device</button>
+  <span class="prog" id="prog">0/0</span>
+</div></div>
+<nav class="chips" aria-label="Sections"><div class="chips-in" id="chips"></div></nav>
+
+<div class="wrap">
+  <header class="mast">
+    <p class="eyebrow">Monday viewing</p>
+    <h1>Baleno viewing</h1>
+    <p class="standfirst">2024 Suzuki Baleno 1.5 GLX manual, 47,294 km, white, ex-rental, one owner. Haval Milnerton (Tijgerhof, Milnerton). Open Mon-Fri 08:00-17:30, Sat 08:00-13:00. Listed R229,200.</p>
+  </header>
+
+  <div class="rule">
+    <b>Ground rule</b>
+    <p>I do NOT sign an offer to purchase or pay any deposit on Monday. Look, drive, photograph, inspect. Decide after the mechanic.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">Key numbers</h3>
+    <ul class="keys">
+      <li><b>Offer R215,000 all in</b> (fees, licence, registration). Listed R229,200. Sam said "geen probleem" but it is NOT in writing yet.</li>
+      <li>Sam's fees <b>R11,495</b> (admin, licensing, registration, smash-and-grab). He said he will "try" to absorb them.</li>
+      <li>Warranty to Jan 2029, 1 service left on the plan (Sam, voice note, not in writing).</li>
+      <li>Deposit R86,900. Extra R2,000 a month from guilt-free money, never a debit order.</li>
+      <li>Listing mistakes: says automatic (Sam says manual); says tracker fitted (Sam says none).</li>
+      <li>Insurance: OUTsurance R1,349.33 (quote OT166770278, valid to 25 Oct). 1st for Women R1,106.31 (older, different car).</li>
+      <li>Already decided: no balloon payment, no add-ons, R6,000 a month is a ceiling, two airbags are fine, manuals are fine.</li>
+    </ul>
+  </div>
+
+  <details class="fold" id="syncCard">
+    <summary>Sync and backup</summary>
+    <p class="tiny">Everything is saved on this device first. To keep it if the browser is cleared, and to share it between phone and laptop, turn on sync with a passphrase of at least 8 characters. Use the same passphrase on each device. Only someone with the passphrase can read it.</p>
+    <div id="syncOff">
+      <input type="password" id="syncKey" placeholder="Sync passphrase (8+ characters)" autocomplete="off" autocapitalize="off">
+      <div class="btn-row"><button class="btn" id="syncOn" type="button">Turn on sync</button></div>
+    </div>
+    <div id="syncOn2" hidden>
+      <div class="btn-row">
+        <button class="btn" id="syncNow" type="button">Sync now</button>
+        <button class="btn ghost" id="syncStop" type="button">Turn off</button>
+      </div>
+    </div>
+    <div class="syncmsg" id="syncMsg"></div>
+    <p class="tiny">Fallback: "Copy all my notes" at the bottom puts every tick and note on the clipboard as plain text for WhatsApp or Notes.</p>
+  </details>
+
+  <div id="app"></div>
+
+  <section id="calcs">
+    <div class="sec-head"><h2>Calculators</h2></div>
+    <p class="intro">Yellow boxes are yours to change. Results update as you type. Calculator numbers are saved too.</p>
+
+    <h3>Calc 1. Monthly cost and payoff</h3>
+    <div class="card calc" id="c1">
+      <div class="fgrid" id="c1in"></div>
+      <div class="res" id="c1out"></div>
+      <p class="tiny" style="margin-top:.7rem">Minimum = instalment + admin fee + credit life on the balance. With extra, each payment is minimum + extra, and interest runs on the falling balance.</p>
+      <table class="mini" id="c1tab"></table>
+      <h3>Saved scenarios</h3>
+      <div style="display:flex;gap:.5rem">
+        <input type="text" id="scnName" placeholder="Name, e.g. Polo vs Swift" maxlength="40" style="flex:1">
+        <button class="btn sm" id="scnSave" type="button">Save</button>
+      </div>
+      <div id="scnList"></div>
+      <div class="btn-row"><button class="btn ghost sm" id="c1reset" type="button">Reset calculator 1 to defaults</button></div>
+    </div>
+
+    <h3>Calc 2. Fee check</h3>
+    <div class="card calc" id="c2">
+      <div class="f"><label for="c2-fees">Fees Sam quotes (R)</label><input type="number" inputmode="decimal" step="any" id="c2-fees" data-k="in:c2-fees" data-def="11495"></div>
+      <table class="mini">
+        <tr><th>Item</th><th>Normal range</th></tr>
+        <tr><td>Government charges</td><td>about R1,500</td></tr>
+        <tr><td>Pre-delivery inspection</td><td>R1,000+</td></tr>
+        <tr><td>Roadworthy</td><td>R135 to R800</td></tr>
+        <tr><td>History / HPI check</td><td>R200 to R400</td></tr>
+        <tr><td>Delivery fuel</td><td>R300 to R500</td></tr>
+        <tr><td>Dealer admin (negotiable)</td><td>R0 to R3,600</td></tr>
+        <tr><td><b>Likely total</b></td><td><b>about R4,400</b></td></tr>
+        <tr><td><b>High end</b></td><td><b>about R8,800</b></td></tr>
+      </table>
+      <div class="res" id="c2out"></div>
+      <p class="tiny" style="margin-top:.7rem">Fees cannot legally be financed, so they come out of the deposit.</p>
+    </div>
+
+    <h3>Calc 3. Cash to drive away (R215K car)</h3>
+    <div class="card calc" id="c3"></div>
+
+    <h3>Calc 4. Km per year and services</h3>
+    <div class="card calc" id="c4">
+      <div class="fgrid">
+        <div class="f"><label for="c4-odo">Odometer (km)</label><input type="number" inputmode="numeric" step="any" id="c4-odo" data-k="in:c4-odo" data-def="47294"></div>
+        <div class="f"><label for="c4-reg">First registered (Jan 2024 is derived from the warranty ending Jan 2029, unconfirmed)</label><input type="month" id="c4-reg" data-k="in:c4-reg" data-def="2024-01"></div>
+      </div>
+      <div class="res" id="c4out"></div>
+      <div class="rule" style="margin-bottom:0">
+        <b>The counter-intuitive one</b>
+        <p style="font-weight:400">Very low mileage is not automatically good. A car that stood for long stretches or only did short cold trips can be in worse shape than a highway car: perished seals, tired battery, oil never reaching temperature, rusty brake discs. Under 8,000 km a year, ask why, and check services were done by time, not only km. Check the registration date on the papers.</p>
+      </div>
+    </div>
+
+    <h3>Calc 5. The hill test (Nm per tonne)</h3>
+    <div class="card calc" id="c5">
+      <p class="tiny">Torque against weight predicts hill behaviour better than engine size. Both numbers are in the listing's spec tab (kerb weight in kg).</p>
+      <div class="fgrid">
+        <div class="f"><label for="c5-nm">Torque (Nm)</label><input type="number" inputmode="decimal" step="any" id="c5-nm" data-k="in:c5-nm" data-def=""></div>
+        <div class="f"><label for="c5-kg">Kerb weight (kg)</label><input type="number" inputmode="decimal" step="any" id="c5-kg" data-k="in:c5-kg" data-def=""></div>
+      </div>
+      <div class="res" id="c5out"></div>
+      <table class="mini">
+        <tr><td>Under 115</td><td>struggles, aircon on and loaded</td></tr>
+        <tr><td>115-125</td><td>marginal, you will notice it</td></tr>
+        <tr><td>125-135</td><td>fine in normal driving</td></tr>
+        <tr><td>135+</td><td>pulls up hills without downshifting</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="info">
+    <div class="sec-head"><h2>Reference</h2></div>
+    <div class="card contact">
+      <h3 style="margin-top:0">Contacts</h3>
+      <a href="tel:0765376229">Sam, Haval Milnerton: <b>076 537 6229</b></a>
+      <a href="tel:0219577500">Barons Bellville: <b>021 957 7500</b></a>
+      <a href="tel:0860060000">OUTsurance: <b>08 600 60 000</b> (quote OT166770278)</a>
+    </div>
+
+    <details class="fold"><summary>Fallbacks</summary>
+      <ul class="plain">
+        <li><b>Barons Bellville Polo Vivo 1.4 Comfortline manual, 2022, 61,073 km.</b> Their total R212,167.50 (R199,950 plus R12,217.50 fees). Counter R190,000 all in, settle R200,000 or less. Timing belt due at 90,000 km (about 3 years, about R12,000). No warranty, probably no CarPlay or camera.</li>
+        <li><b>2021 Toyota Starlet 1.4 XR automatic,</b> 72,817 km, R209,995, CFAO Toyota Rondebosch East (seen in search only).</li>
+        <li><b>2020 Toyota Starlet 1.4 XR manual,</b> 29,000 km, R199,900, Cubbi George (about 3 hours away).</li>
+      </ul>
+    </details>
+
+    <details class="fold"><summary>When I buy: details for the insurer</summary>
+      <ul class="plain">
+        <li>Licence issued 22 February 2017</li>
+        <li>The Feb 2024 claim was theft of wheels, not accidental</li>
+        <li>Parked in a security village, access controlled</li>
+        <li>Private use, 5,001 to 10,000 km a year, regular driver me</li>
+        <li>VIN and engine number (photographed Monday)</li>
+        <li>Ask: the excess, whether a tracker is required and who pays, what a claim does to the premium, whether I'm covered if someone else drives, whether garaging lowers it</li>
+        <li>Cover must be active from the collection date</li>
+      </ul>
+    </details>
+
+    <details class="fold"><summary>Sam's process</summary>
+      <p>Finance documents: 3 months bank statements, 3 payslips, copy of ID, copy of licence, proof of address. Then the offer to purchase, then the bank application and quote (they will offer add-ons; none compulsory), then a roadworthy and their 160-point check, then a clean the day before. About 3 days from approval to handover. Do no more than 3 finance applications. I am free to compare while his is open.</p>
+    </details>
+
+    <details class="fold"><summary>Messages ready to copy</summary><div id="msgs"></div></details>
+
+    <details class="fold"><summary>Remember</summary>
+      <ul class="plain">
+        <li>A dealer sale gives 6 months of legal cover: repair, replace or refund (Consumer Protection Act). A private sale gives none.</li>
+        <li>After collection: photograph the odometer on day one, confirm NaTIS shows me as owner, file the invoice, finance agreement, insurance schedule, inspection report and service book photos.</li>
+        <li>My credit report is free once a year from each bureau and does not count as a hard enquiry.</li>
+      </ul>
+    </details>
+  </section>
+
+  <div class="btn-row" style="margin-top:2rem">
+    <button class="btn" id="copyAll" type="button">Copy all my notes</button>
+    <button class="btn danger" id="resetAll" type="button">Reset ticks and notes</button>
+  </div>
+  <p class="tiny" style="margin-top:.8rem">Reset clears ticks and notes only. Your calculator numbers and saved scenarios stay.</p>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- config ---------- */
+  var SB_URL = "https://pylydxonynjuaviqjpbs.supabase.co";
+  var SB_KEY = "sb_publishable_XvxvC2AKgltjPTFSUndXCQ_RK84ozCp";   // publishable key: safe in the browser
+  var LS = "baleno.v1", LSK = "baleno.sync";
+
+  /* ---------- content ----------
+     types: h heading, c tick, q question (tick + note), w walk-away tick, n note prompt, p paragraph
+     Ids are section id + position, so edit text freely but avoid reordering after you have ticks saved. */
+  var SECTIONS = [
+    { id:"A", nav:"Ask Sam", title:"A. Ask Sam before Monday", items:[
+      ["q","Confirm the day and time (dealership closes 17:30; Milnerton is about 40 km away)"],
+      ["q","R215,000 in writing, itemised (vehicle price and each fee separately)"],
+      ["q","Service history (dates and km), VIN, warranty and service plan in writing"],
+      ["q","Can my friend bring a diagnostic device? Can I test drive it and have an independent inspection before I pay?"],
+      ["q","Keep the car cold (not started before I arrive); service book and both keys ready"],
+      ["q","A route with a real hill for the test drive"],
+      ["q","Hold the car for me for 3 days after the inspection?"],
+      ["q","Which documents does the finance house need? (I have bank statements and proof of address)"]
+    ]},
+    { id:"L", nav:"Listing", title:"L. Listing screen for this car", intro:"From the kit's \"Before you favourite it\". Only the points that still matter for the Baleno.", items:[
+      ["c","Torque divided by kerb weight is 125 Nm/t or better (use the hill-test calculator below; both numbers are in the spec tab)"],
+      ["c","Manual gearbox confirmed, not an AMT / AGS (an automated manual lurches uphill, a hard no). The listing says automatic."],
+      ["c","Claimed fuel use under 6.5 L/100 km (add 15-20% for real-world driving)"],
+      ["c","Code 2, not Code 3 (Code 3 is a rebuilt write-off: hard to insure, hard to finance, poor resale)"],
+      ["c","Service plan or factory warranty still running (the single biggest swing in the monthly budget, R500 vs R2,000)"],
+      ["c","Tyres in the photos match each other and have tread"]
+    ]},
+    { id:"0", nav:"Before I leave", title:"0. Before I leave home", items:[
+      ["c","Time confirmed with Sam"],
+      ["c","Written price on my phone"],
+      ["c","Friend confirmed with the diagnostic device"],
+      ["c","Mechanic or DEKRA/AA inspection (about R1,500) booked, or a day pencilled in"],
+      ["c","Phone charged (I will take many photos)"]
+    ]},
+    { id:"1", nav:"Bring", title:"1. Bring", items:[
+      ["c","ID and driver's licence (licence needed for the test drive)"],
+      ["c","Phone and cable (to test CarPlay by cable, then try wireless)"],
+      ["c","Torch, paper towel (dipstick), pen"],
+      ["c","A coin or tread gauge (legal tyre minimum 1.6 mm)"],
+      ["c","This list and the written price"],
+      ["c","Finance documents (do NOT submit anything Monday): 3 months bank statements, 3 payslips, copy of ID, copy of licence, proof of address"]
+    ]},
+    { id:"2", nav:"Photos", title:"2. Photograph before touching anything", items:[
+      ["c","Odometer"],
+      ["c","VIN in the windscreen (base of windscreen, driver's side), plus door pillar and engine bay if there. Match to the papers."],
+      ["c","Engine number stamped on the engine (ask Sam or the mechanic to point it out). Match to the registration papers."],
+      ["c","All four sides, front and rear bumpers, each wheel"],
+      ["c","Every service-book page"],
+      ["c","Every scratch, dent or repair (everything Sam admits is a discount)"]
+    ]},
+    { id:"3", nav:"Ask at car", title:"3. Questions for Sam at the car", intro:"Answers in writing where possible.", items:[
+      ["h","The price"],
+      ["q","Is R215,000 the vehicle price with fees waived, or a total that includes fees I pay in cash? (Fees cannot legally be financed; it can move my loan by up to R11,495.)"],
+      ["q","What is NOT included in that price? (licence and registration, roadworthy, delivery, admin, valet)"],
+      ["q","What exactly does the admin fee cover? (Often \"nothing specific\", and that is when it becomes negotiable.) Can it be dropped?"],
+      ["q","Are the roadworthy and change of ownership included? (Two separate line items that quietly appear at signing.)"],
+      ["q","Is the car physically at Milnerton, or does it need to come from another branch? (Delivery can be R3,500.)"],
+      ["q","No add-ons: no paint protection, tyre or rim insurance, extended warranty. (Smash-and-grab film already fitted and in the price is fine.)"],
+      ["q","What is included at handover: full tank, both keys, service book, spare wheel and jack, licence disc, roadworthy"],
+      ["q","Any pressure to sign today or \"price only good until this afternoon\"? (A reason to slow down.)"],
+      ["h","The car"],
+      ["q","Manual or automatic? (Listing says both. Sam says manual.)"],
+      ["q","Which rental company owned it? Where are the service records from?"],
+      ["q","Service dates and km for every service"],
+      ["q","Warranty to Jan 2029 in writing, tied to the VIN. Does it transfer to me as second owner? Does rental use affect it? (not verified)"],
+      ["q","Service plan: when is the one service due, and where?"],
+      ["q","Open recalls on this VIN"],
+      ["q","Any mechanical or electrical faults of any sort?"],
+      ["q","Has it been in an accident? Any panel or paint work? Was touch-up paint used?"],
+      ["q","What did the 160-point check find and replace? Can I see the report?"],
+      ["q","Tyre brand and tread (a full set costs R4,000 to R15,000, so worn tyres come off the offer)"],
+      ["q","Is there any outstanding finance on the car?"],
+      ["q","Timing chain or belt? (I believe chain; unverified)"],
+      ["q","Why is it being sold now, and how long have they had it? How long has it been on the floor? (Past 60 days it is not selling, and that is leverage.)"],
+      ["q","What work have they done to it since they took it in? (Tells me what was wrong when it arrived. \"Nothing, it was perfect\" is rarely true.)"],
+      ["q","Is there a DEKRA or AA condition report on file? (Reluctance is meaningful.)"],
+      ["q","Does the service plan transfer to me, and is there a transfer fee? Get it in writing. If the next service is close, ask them to do it before handover."],
+      ["q","When does the licence disc expire? (Decides whether the R400-R700 renewal is mine this month.)"],
+      ["h","Finance"],
+      ["q","Is the interest rate linked to prime or fixed? Quote me both."],
+      ["q","Do you add any extra interest on top of the bank's rate (a dealer mark-up)? \"What rate did the bank approve for me, and what rate is on my contract?\" (Dealers may add a margin, commonly 1 to 2 percentage points, within the legal maximum, repo plus 17% per one source, unverified. Ask for the bank's own rate and compare it with my own pre-approval.)"],
+      ["q","Initiation fee no more than the legal cap R1,207.50 (incl. VAT) and monthly service fee no more than R69? (Anything above is unlawful; unverified for this contract.)"],
+      ["q","Does a bigger deposit get a better rate, or just a smaller loan?"],
+      ["q","Is credit life insurance compulsory, and what does it cost per month? (I believe it is not. Get it in writing.)"],
+      ["q","Total cost of credit over the full term, not just the monthly"],
+      ["q","No balloon, no residual"],
+      ["q","If I pay off the financing early, is there a penalty or early-settlement fee?"],
+      ["q","If I pay a lump sum every 6 months, is there a fee? Does each extra payment reduce my balance immediately, or must I phone to recalculate? (Sam said I must phone. Get this in writing.)"],
+      ["q","Can I choose the debit order date?"],
+      ["q","Do I need credit shortfall insurance?"],
+      ["q","Is the price the same if I use their finance as with my own?"],
+      ["h","Process"],
+      ["q","Will they allow an independent inspection before I pay? (A \"no\" ends it.)"],
+      ["q","How long from approval to handover (Sam said about 3 days), and can the car be held?"],
+      ["q","Licensing and registration will be done and NaTIS will show me as owner"]
+    ]},
+    { id:"4", nav:"Engine off", title:"4. At the car, engine off and cold", items:[
+      ["c","They did not start it before I arrived"],
+      ["c","Trim is GLX not GL: alloys, LED lights, push-button start, reverse camera, rear sensors, touchscreen (GL has none and only 2 airbags)"],
+      ["c","Airbags: count the labels (steering wheel, dash, seat sides, roof pillars). Warning light goes out after start."],
+      ["c","Paint colour even in daylight, panel gaps even, no overspray on rubbers"],
+      ["c","Tyres: same brand all round, tread left, even wear"],
+      ["c","Alloy wheels: kerb scuffs on all four"],
+      ["c","Spare keys: see BOTH. Does each lock, unlock and START the car (push-button with the fob)? Do the remote buttons work on both?"],
+      ["c","Spare wheel, jack and wheel spanner are there"],
+      ["c","Underneath: no fresh oil or coolant drips"],
+      ["c","Bonnet: oil level and colour (dark and low is a warning, milky is a walk-away), coolant level, brake fluid, battery clean"],
+      ["c","Smell: damp or mould, cigarettes, strong air freshener"],
+      ["c","Carpet under the mats is dry"]
+    ]},
+    { id:"5", nav:"Inside", title:"5. Inside", intro:"Tick each feature the listing claims.", items:[
+      ["c","Apple CarPlay and Android Auto: works by cable? Try wireless. Is it wireless?"],
+      ["c","Touchscreen: what size, standard unit or aftermarket?"],
+      ["c","Bluetooth and USB"],
+      ["c","Reverse camera and rear parking sensors"],
+      ["c","Cruise control"],
+      ["c","Keyless entry and push-button start"],
+      ["c","Automatic climate control: cold in a minute, then heat. Genuinely cold, not just blowing."],
+      ["c","Every window, all four, up and down"],
+      ["c","Wipers and washers work (front and rear)"],
+      ["c","Central locking and the remote"],
+      ["c","Every light: headlights, DRLs, indicators, brake lights (someone watches), reverse"],
+      ["c","ISOFIX points at the rear"],
+      ["c","Driver's seat height adjustable? Steering wheel moves up/down AND in/out? Sit in it 5 minutes."],
+      ["c","Wear on pedals, steering wheel, seat bolsters, gear lever, door handles, boot floor matches 47,294 km"],
+      ["c","No warning lights stay on after start"]
+    ]},
+    { id:"6", nav:"Ex-rental", title:"6. Ex-rental checks", items:[
+      ["c","Clutch: bite point not at the very top, no slipping up a hill, no judder pulling off"],
+      ["c","Every gear goes in smoothly, reverse included"],
+      ["c","Interior wear heavier than the km suggests"],
+      ["c","Touched-up paint (colour or gloss slightly off)"],
+      ["c","Tyre and brake wear match the km"]
+    ]},
+    { id:"7", nav:"Drive", title:"7. The drive", items:[
+      ["c","Cold start: rattles in the first 30 seconds, smoke"],
+      ["c","A real hill, top gear, aircon on, with a passenger, about 100 km/h. Did I have to change down? (my number two priority)"],
+      ["c","Merge: real on-ramp, accelerate hard"],
+      ["c","Stop-start traffic: how does the clutch feel? Would I accept a manual for 8+ years?"],
+      ["c","Brake hard once: no pulling, no judder, no grinding, pedal not spongy"],
+      ["c","Tracks straight on a flat road, no vibration at 100-120 km/h"],
+      ["c","Full lock both ways: no clicking"],
+      ["c","A bumpy road: no knocks"],
+      ["c","Steering straight on a flat road, hands loose. Suzuki \"dead spot\" at straight-ahead: does it bother me?"],
+      ["c","Listen with the radio off: knocking, whining, droning"],
+      ["c","Park it myself. Easy to place and see out of?"],
+      ["c","Park it afterwards: drips underneath again"],
+      ["c","Would I be pleased to get into this car on a Tuesday morning?"]
+    ]},
+    { id:"8", nav:"Paperwork", title:"8. Paperwork on the spot", items:[
+      ["c","Service history complete: expect 3 services at about 15,000, 30,000 and 45,000 km (every 15,000 km or 12 months). Dates and km at every stamp, no gap over 12 months, last stamp near 45,000 km. Who did each, invoices for any independent. Next due about 60,000 km."],
+      ["c","Ask the Suzuki dealer to read me the digital service record by VIN and compare with the book"],
+      ["c","Odometer higher than the last stamp, never lower, and the gap since is realistic"],
+      ["c","Registered owner / rental company on the papers"],
+      ["c","Licence disc valid"],
+      ["c","No money owed on the car (settlement or finance-clear letter)"],
+      ["c","VIN on car = VIN in windscreen = papers = what Sam sent"],
+      ["c","Engine number on engine = registration papers (a mismatch on either is a walk-away)"]
+    ]},
+    { id:"9", nav:"Walk away", title:"9. Walk away if", walk:true, intro:"Tick \"I saw this\" if you do.", items:[
+      ["w","No service book and no invoices"],
+      ["w","More than one service missing"],
+      ["w","Seller will not put the price, dates and km in writing"],
+      ["w","Seller will not allow an independent inspection"],
+      ["w","Anything that does not match: VIN, engine number, owner, km versus wear"],
+      ["w","Milky oil, a slipping clutch, warning lights, damp carpets"],
+      ["w","Pressure to sign today"]
+    ]},
+    { id:"10", nav:"After I leave", title:"10. After I leave", intro:"Fill within the hour.", items:[
+      ["n","Did it climb the hill in top gear? yes / no"],
+      ["n","Clutch feel"],
+      ["n","Anything that rattled, knocked or leaked"],
+      ["n","CarPlay: cable / wireless / none"],
+      ["n","Did the price match Sam's message?"],
+      ["n","Would I be happy in this car in 2036?"]
+    ]},
+    { id:"11", nav:"Decision", title:"11. After Monday: the decision", intro:"All four are NOT YET DONE.", items:[
+      ["c","Sam sends the R215,000 price in writing (WhatsApp or a quote), itemised, fees included. Until then it is only a verbal \"geen probleem\"."],
+      ["c","The independent inspection (and my friend's diagnostics) passes"],
+      ["c","Service history is real and the Suzuki dealer's digital record matches the book"],
+      ["c","The warranty to Jan 2029 is confirmed in writing against the VIN"],
+      ["p","If any fails, or Sam stops answering the inspection question, walk away. Then get insurance quotes from 1st for Women, Old Mutual and Santam on the 2024 GLX manual before finance."]
+    ]},
+    { id:"12", nav:"At the desk", title:"12. At the desk (only after the inspection passes)", intro:"Not Monday. This is for the day it actually gets to numbers.", items:[
+      ["c","Pre-approval letter in hand BEFORE talking numbers (a fast, certain buyer with a big deposit is worth money to them)"],
+      ["c","Asked for money off the price, not extras thrown in"],
+      ["c","Asked what the admin fee covers, and asked them to drop it"],
+      ["c","Declined paint protection and dent cover"],
+      ["c","Declined tyre and rim insurance"],
+      ["c","Declined shortfall / gap cover (with a big deposit I am not underwater)"],
+      ["c","Extended warranty: not needed while the factory warranty to Jan 2029 is confirmed"],
+      ["c","Let their finance desk quote, but only to beat what I already have"]
+    ]},
+    { id:"13", nav:"Before signing", title:"13. Before I sign", items:[
+      ["c","Extra payments reduce capital, confirmed in writing"],
+      ["c","Rate is linked to prime, not fixed (better for an overpayer, and I benefit from rate cuts)"],
+      ["c","No early settlement penalty (check anyway)"],
+      ["c","No balloon. Confirmed in writing."],
+      ["c","Read the total cost of credit figure on the quote (it is what the car really costs)"],
+      ["c","Know whether the R69 to R80 monthly service fee is inside or outside the instalment"],
+      ["c","Credit life insurance: is it bundled? What does it cost? (I believe it is not compulsory)"],
+      ["c","Instalment debit order date chosen; the extra R2,000 I pay myself, never as a debit order"]
+    ]}
+  ];
+
+  var MESSAGES = [
+    ["1. To Sam: book Monday and the inspection",
+     "Hi Sam, dankie! Ek wil graag Maandag om [tyd] kom kyk na die Baleno. Ek bring my vriend saam met sy diagnostiese toestel. Kan jy asseblief die kar koud hou (nie voor my aankoms aansit nie), en die diensboekie en albei sleutels beskikbaar hê? Ek wil ook graag 'n onafhanklike meganikus (DEKRA of AA) die kar laat inspekteer voor ek iets teken of 'n deposito betaal. Kan ons die kar vir 'n uur daarvoor uitneem, of kan die meganikus by julle kom kyk? Kan jy asseblief ook voor Maandag skriftelik vir my stuur: die R215,000 met die uitbreking van die fooie, die diensgeskiedenis (datums en km), die VIN, en die waarborg en diensplan (Jan 2029, 1 diens oor)? Dankie!"],
+    ["2. To Sam: confirm the price",
+     "Fantasties, dankie Sam! Net om seker te maak: die totale prys is dus R215,000 alles ingesluit (fooie, lisensie en registrasie), geen ekstras nie? Kan jy dit asseblief vir my skriftelik stuur, met die uitbreking? Ek sal dan met my vriend en 'n meganikus ooreenkom oor 'n tyd om die kar te kom check."],
+    ["3. To Sam: birthday and open questions",
+     "Ps. dis my verjaarsdag volgende week, so as daar 'n verjaarsdag-afslag moontlik is, sal dit 'n mooi geskenk wees! Kan jy asseblief ook vir my stuur: die diensgeskiedenis (datums en km), die VIN, en of die kar se gebruik as huurkar die waarborg raak?"],
+    ["4. To Barons (Polo Vivo)",
+     "Dankie. Kan jy dit vir R190,000 alles ingesluit doen? Dis my verjaarsdag volgende week, so dit sal 'n mooi geskenk wees! Ek vergelyk nog opsies en wil nie nou verbind nie. As jy die laagste prys skriftelik kan stuur en die kar vir 3 dae vir my kan hou, laat weet ek jou, onderhewig aan 'n meganikus se inspeksie."]
+  ];
+
+  var C1 = [
+    ["price","All-in price (R)",215000],["deposit","Deposit (R)",86900],
+    ["rate","Interest rate (% a year)",13.4],["term","Term (months)",72],
+    ["admin","Admin fee per month (R) - may be R69, confirm",0],["cl","Credit life per R1,000 owed per month (R) - could be R3, confirm",0],
+    ["extra","Extra per month (R)",2000],["ins","Insurance per month (R)",1349.33],
+    ["fuel","Fuel use (L/100 km)",5.4],["petrol","Petrol (R per litre)",26.49],
+    ["kmy","Km per year",9000],["svc","Service and wear fund (R/month)",617],
+    ["other","Other small costs (R/month)",226],["ceil","Ceiling (R/month)",6000]
+  ];
+
+  var C3 = [
+    ["DEKRA/AA inspection",1000,1500,"unsure, get a quote"],
+    ["Bank initiation fee",0,1208,"cap R1,207.50 incl VAT; as agreed it is added to the loan"],
+    ["Dealer fees (admin, licensing, registration, smash-and-grab)",0,11495,"not in writing"],
+    ["Number plates",0,500,"UNSURE: R350+ in 2023, no 2026 price; may not need new plates"],
+    ["Change of ownership / registration",0,0,"worst case: included in the dealer fees above (government cap R330)"],
+    ["Licence disc",0,0,"worst case: included above (ask when the current disc expires)"],
+    ["Roadworthy",0,0,"Sam's process includes it; if separate R135 municipal, R500-R800 private; unsure who pays"],
+    ["Delivery",0,0,""],
+    ["First month's insurance",1106,1349,""],
+    ["Tracker installation",0,0,"Baleno needs none"],
+    ["First full tank",0,980,"37 L at R26.49; ask Sam to hand it over full"]
+  ];
+
+  /* ---------- tiny helpers ---------- */
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function R(n) { var s = Math.abs(Math.round(n)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); return (n < 0 ? "-R" : "R") + s; }
+  function R2(n) { var x = Math.abs(n).toFixed(2), p = x.split("."); return (n < 0 ? "-R" : "R") + p[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "." + p[1]; }
+  var toastT;
+  function toast(msg) { var t = $("toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(function () { t.classList.remove("on"); }, 2200); }
+
+  /* ---------- state: { key: {v, t} }, merged per key by newest t ---------- */
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(LS) || "{}") || {}; } catch (e) { state = {}; }
+  function persist() { try { localStorage.setItem(LS, JSON.stringify(state)); } catch (e) {} }
+  function get(k, def) { var s = state[k]; return (s && s.v != null) ? s.v : def; }
+  function put(k, v) { state[k] = { v: v, t: Date.now() }; persist(); schedulePush(); }
+
+  /* ---------- build the checklist ---------- */
+  var app = $("app"), chips = $("chips"), countable = [];
+
+  function noteBox(key, rows) {
+    var ta = el("textarea"); ta.rows = rows || 3; ta.dataset.k = key; ta.setAttribute("aria-label", "Note");
+    ta.addEventListener("input", function () { put(key, ta.value); refreshNoteDots(); });
+    return ta;
+  }
+
+  function buildItem(secId, n, it, walk) {
+    var type = it[0], text = it[1], id = secId + "." + n, row = el("div", "row");
+    if (type === "n") {
+      row.appendChild(el("p", "prompt", text));
+      row.appendChild(noteBox("aft:" + id, 3));
+      return row;
+    }
+    var line = el("div", "line"), lab = el("label", "chk"), cb = el("input");
+    cb.type = "checkbox"; cb.dataset.k = (type === "w" ? "walk:" : "chk:") + id;
+    cb.addEventListener("change", function () { put(cb.dataset.k, cb.checked); updateCounts(); });
+    lab.appendChild(cb); lab.appendChild(el("span", "box"));
+    var tx = el("span", "txt");
+    if (type === "q") tx.appendChild(el("span", "qtag", "Q"));
+    tx.appendChild(document.createTextNode(text));
+    lab.appendChild(tx); line.appendChild(lab);
+    var nb = el("button", "nb", "✎"); nb.type = "button"; nb.setAttribute("aria-label", "Note for this line");
+    line.appendChild(nb); row.appendChild(line);
+    var wrap = el("div", "notewrap"); wrap.hidden = true;
+    var ta = noteBox("note:" + id, 3);
+    ta.placeholder = type === "q" ? "His answer..." : "Note...";
+    wrap.appendChild(ta); row.appendChild(wrap);
+    nb.addEventListener("click", function () { wrap.hidden = !wrap.hidden; if (!wrap.hidden) ta.focus(); });
+    nb._wrap = wrap; nb._ta = ta;
+    if (type !== "w") countable.push(cb);
+    return row;
+  }
+
+  SECTIONS.forEach(function (s) {
+    var sec = el("section"); sec.id = "s" + s.id;
+    var head = el("div", "sec-head"); head.appendChild(el("h2", null, s.title));
+    var cnt = el("span", "cnt"); cnt.dataset.sec = s.id; head.appendChild(cnt); sec.appendChild(head);
+    if (s.intro) sec.appendChild(el("p", "intro", s.intro));
+    var box = el("div", s.walk ? "walk" : null), n = 0;
+    s.items.forEach(function (it) {
+      if (it[0] === "h") { box.appendChild(el("h3", null, it[1])); return; }
+      if (it[0] === "p") { box.appendChild(el("p", "intro", it[1])); return; }
+      n++; box.appendChild(buildItem(s.id, n, it, s.walk));
+    });
+    sec.appendChild(box);
+    var det = el("details", "sec-notes"); det.appendChild(el("summary", null, "Notes for this section"));
+    det.appendChild(noteBox("sec:" + s.id, 4)); sec.appendChild(det);
+    app.appendChild(sec);
+    var a = el("a", null, s.nav); a.href = "#s" + s.id; chips.appendChild(a);
+  });
+  [["calcs","Calculators"],["info","Reference"]].forEach(function (c) { var a = el("a", null, c[1]); a.href = "#" + c[0]; chips.appendChild(a); });
+
+  function updateCounts() {
+    var done = 0; countable.forEach(function (c) { if (c.checked) done++; });
+    $("prog").textContent = done + "/" + countable.length;
+    SECTIONS.forEach(function (s) {
+      var sp = document.querySelector('[data-sec="' + s.id + '"]'), boxes = document.querySelectorAll("#s" + s.id + ' input[type=checkbox]');
+      if (!boxes.length) { sp.textContent = ""; return; }
+      var d = 0; boxes.forEach(function (b) { if (b.checked) d++; });
+      sp.textContent = d + "/" + boxes.length;
+    });
+  }
+  function refreshNoteDots() {
+    document.querySelectorAll(".nb").forEach(function (b) { b.classList.toggle("has", !!(b._ta && b._ta.value.trim())); });
+  }
+
+  /* ---------- messages ---------- */
+  var msgs = $("msgs");
+  MESSAGES.forEach(function (m) {
+    var d = el("div", "msg"); d.appendChild(el("h4", null, m[0]));
+    var ta = el("textarea"); ta.value = m[1]; d.appendChild(ta);
+    var b = el("button", "btn ghost sm", "Copy"); b.type = "button";
+    b.addEventListener("click", function () { copyText(ta.value, "Message copied"); });
+    d.appendChild(b); msgs.appendChild(d);
+  });
+
+  /* ---------- calculators ---------- */
+  function mkInput(id, def, extra) {
+    var i = el("input"); i.type = "number"; i.inputMode = "decimal"; i.step = "any";
+    i.id = id; i.dataset.k = "in:" + id; i.dataset.def = def;
+    i.addEventListener("input", function () { put(i.dataset.k, i.value); calcAll(); });
+    return i;
+  }
+  var c1in = $("c1in");
+  C1.forEach(function (f) {
+    var d = el("div", "f"), l = el("label", null, f[1]); l.htmlFor = "c1-" + f[0];
+    d.appendChild(l); d.appendChild(mkInput("c1-" + f[0], f[2])); c1in.appendChild(d);
+  });
+
+  var c3 = $("c3");
+  (function () {
+    var head = el("div", "c3tot"); head.appendChild(el("div", "lab", "Two editable columns: As agreed (Sam confirms R215,000 all in) and Worst case (fees not waived)."));
+    c3.appendChild(head);
+    C3.forEach(function (r, i) {
+      var d = el("div", "c3row"); d.appendChild(el("div", "lab", r[0]));
+      if (r[3]) d.appendChild(el("div", "why", r[3]));
+      var two = el("div", "two"), a = el("div"), b = el("div");
+      a.appendChild(el("small", null, "As agreed")); a.appendChild(mkInput("c3-a" + i, r[1]));
+      b.appendChild(el("small", null, "Worst case")); b.appendChild(mkInput("c3-w" + i, r[2]));
+      two.appendChild(a); two.appendChild(b); d.appendChild(two); c3.appendChild(d);
+    });
+    function tot(id, label, big) {
+      var d = el("div", "c3tot" + (big ? " big" : "")); d.appendChild(el("div", "lab", label));
+      var a = el("div", "v"), b = el("div", "v"); a.id = id + "a"; b.id = id + "w"; d.appendChild(a); d.appendChild(b); c3.appendChild(d);
+    }
+    tot("c3drive", "To physically drive away", true);
+    [["buf","Insurance excess buffer (hold it, do not spend it)",5000,6560],["con","First six weeks contingency (my estimate)",3000,5000]].forEach(function (r) {
+      var d = el("div", "c3row"); d.appendChild(el("div", "lab", r[1]));
+      var two = el("div", "two"), a = el("div"), b = el("div");
+      a.appendChild(el("small", null, "As agreed")); a.appendChild(mkInput("c3-" + r[0] + "a", r[2]));
+      b.appendChild(el("small", null, "Worst case")); b.appendChild(mkInput("c3-" + r[0] + "w", r[3]));
+      two.appendChild(a); two.appendChild(b); d.appendChild(two); c3.appendChild(d);
+    });
+    tot("c3ready", "Have ready (on top of the deposit)", true);
+    c3.appendChild(el("p", "tiny", "If Sam's fees are not waived they cannot legally be financed, so they come out of the deposit, not the loan.")).style.marginTop = ".7rem";
+  })();
+
+  ["c2-fees", "c4-odo", "c5-nm", "c5-kg"].forEach(function (id) {
+    var i = $(id); i.addEventListener("input", function () { put(i.dataset.k, i.value); calcAll(); });
+  });
+  $("c4-reg").addEventListener("input", function () { put("in:c4-reg", this.value); calcAll(); });
+
+  function n(id) { var v = parseFloat($(id).value); return isFinite(v) ? v : 0; }
+  function pmt(rate, term, loan) {
+    var r = rate / 100 / 12;
+    if (term <= 0) return loan;
+    if (r === 0) return loan / term;
+    return loan * r / (1 - Math.pow(1 + r, -term));
+  }
+  function plan(p, price) {
+    var loan = Math.max(0, price - p.deposit), r = p.rate / 100 / 12;
+    var minpay = pmt(p.rate, p.term, loan) + p.admin + loan / 1000 * p.cl;
+    var pay = minpay + p.extra, bal = loan, months = 0, interest = 0, paid = 0, never = false;
+    while (bal > 0.005 && months < 600) {
+      var i = bal * r, cl = bal / 1000 * p.cl, due = bal + i + p.admin + cl, pm = Math.min(pay, due), red = pm - i - p.admin - cl;
+      if (red <= 0) { never = true; break; }
+      interest += i; paid += pm; bal -= red; months++;
+    }
+    var fuelL = p.kmy / 12 * p.fuel / 100, fuelR = fuelL * p.petrol;
+    var running = p.ins + fuelR + p.svc + p.other, allin = minpay + running;
+    return { loan: loan, minpay: minpay, pay: pay, months: months, interest: interest, paid: paid, never: never,
+             fuelR: fuelR, running: running, allin: allin, left: p.ceil - allin };
+  }
+  function row(cls, k, v) { var d = el("div", cls); d.appendChild(el("span", null, k)); d.appendChild(el("span", null, v)); return d; }
+  function fill(node, rows) { node.textContent = ""; rows.forEach(function (r) { node.appendChild(r); }); }
+
+  function calcAll() {
+    var p = {}; C1.forEach(function (f) { p[f[0]] = n("c1-" + f[0]); });
+    var a = plan(p, p.price);
+    fill($("c1out"), [
+      row("", "Loan (price minus deposit)", R(a.loan)),
+      row("big", "Minimum payment, month 1", R(a.minpay)),
+      row("", "Payment with the extra", R(a.pay)),
+      row("big", "Months to settle", a.never ? "never at this payment" : a.months + " (" + (a.months / 12).toFixed(1) + " yrs)"),
+      row("", "Total interest", a.never ? "-" : R(a.interest)),
+      row("", "Total paid on the loan", a.never ? "-" : R(a.paid)),
+      row("", "Fuel per month", R(a.fuelR)),
+      row("", "Running costs per month", R(a.running)),
+      row("big", "All-in month 1 (minimum + running)", R(a.allin)),
+      row("big " + (a.left < 0 ? "neg" : "pos"), "Left of the " + R(p.ceil) + " ceiling", (a.left >= 0 ? "+" : "") + R(a.left)),
+      row("", "All-in if the extra is paid too", R(a.allin + p.extra))
+    ]);
+    var t = $("c1tab"); t.textContent = "";
+    var hr = el("tr"); ["Price", "Min pay", "Months", "All-in", "Left"].forEach(function (h) { hr.appendChild(el("th", null, h)); }); t.appendChild(hr);
+    [215000, 222000, 229200].forEach(function (pr) {
+      var q = plan(p, pr), tr = el("tr");
+      tr.appendChild(el("td", null, R(pr))); tr.appendChild(el("td", null, R(q.minpay)));
+      tr.appendChild(el("td", null, q.never ? "never" : String(q.months)));
+      tr.appendChild(el("td", null, R(q.allin)));
+      var tdl = el("td", q.left < 0 ? "neg-text" : null, (q.left >= 0 ? "+" : "") + R(q.left)); tr.appendChild(tdl);
+      t.appendChild(tr);
+    });
+
+    var f = n("c2-fees"), msg, cls = "";
+    if (f > 8800) { msg = R(f) + " is above the high end (by " + R(f - 8800) + ")"; cls = "neg"; }
+    else if (f > 4400) { msg = R(f) + " is above the likely total but within the high end"; }
+    else { msg = R(f) + " is at or below the likely total"; cls = "pos"; }
+    fill($("c2out"), [row("big " + cls, "Verdict", msg), row("", "Likely total", "about R4,400"), row("", "High end", "about R8,800")]);
+
+    var sa = 0, sw = 0; C3.forEach(function (r, i) { sa += n("c3-a" + i); sw += n("c3-w" + i); });
+    $("c3drivea").textContent = R(sa); $("c3drivew").textContent = R(sw);
+    $("c3readya").textContent = R(sa + n("c3-bufa") + n("c3-cona"));
+    $("c3readyw").textContent = R(sw + n("c3-bufw") + n("c3-conw"));
+
+    var nm = n("c5-nm"), kg = n("c5-kg");
+    if (!nm || !kg) { fill($("c5out"), [row("", "Enter torque and kerb weight", "")]); }
+    else {
+      var ratio = nm / (kg / 1000), hv = ratio < 115 ? "Struggles" : ratio < 125 ? "Marginal" : ratio < 135 ? "Fine" : "Pulls up hills easily";
+      fill($("c5out"), [row("big", "Nm per tonne", ratio.toFixed(0)), row("big " + (ratio < 125 ? "neg" : "pos"), "Verdict", hv)]);
+    }
+
+    var odo = n("c4-odo"), reg = $("c4-reg").value, out = $("c4out");
+    var m = /^(\d{4})-(\d{2})$/.exec(reg);
+    if (!m || !odo) { fill(out, [row("", "Enter odometer and first registered month", "")]); }
+    else {
+      var d0 = new Date(+m[1], +m[2] - 1, 1), yrs = Math.max(0.1, (Date.now() - d0.getTime()) / (365.25 * 86400000));
+      var kpy = odo / yrs, svc = Math.max(yrs, odo / 15000), band;
+      if (kpy < 8000) band = "Suspiciously low"; else if (kpy < 15000) band = "Low and healthy"; else if (kpy < 25000) band = "Normal";
+      else if (kpy < 35000) band = "High"; else band = "Almost certainly a rental or rep car";
+      fill(out, [row("", "Years since first registered", yrs.toFixed(1)), row("big", "Km per year", Math.round(kpy).toLocaleString("en-US")),
+        row("big", "Expected services", "about " + Math.round(svc)), row("big", "Verdict", band)]);
+    }
+  }
+
+  /* scenarios */
+  function renderScenarios() {
+    var list = $("scnList"); list.textContent = "";
+    Object.keys(state).filter(function (k) { return k.indexOf("scn:") === 0 && state[k].v; }).sort().forEach(function (k) {
+      var s = state[k].v, name = k.slice(4), d = el("div", "scn"), nm = el("div", "nm");
+      nm.appendChild(el("b", null, name));
+      var p = {}; C1.forEach(function (f) { p[f[0]] = parseFloat(s.in[f[0]]) || 0; });
+      var q = plan(p, p.price);
+      nm.appendChild(el("span", null, R(p.price) + ", min " + R(q.minpay) + ", " + (q.never ? "never" : q.months + " months") + ", left " + (q.left >= 0 ? "+" : "") + R(q.left)));
+      d.appendChild(nm);
+      var lb = el("button", "btn ghost sm", "Load"); lb.type = "button";
+      lb.addEventListener("click", function () { C1.forEach(function (f) { $("c1-" + f[0]).value = s.in[f[0]]; put("in:c1-" + f[0], String(s.in[f[0]])); }); calcAll(); toast("Loaded " + name); });
+      var db = el("button", "btn danger sm", "Delete"); db.type = "button";
+      db.addEventListener("click", function () { if (confirm("Delete scenario \"" + name + "\"?")) { put(k, null); renderScenarios(); } });
+      d.appendChild(lb); d.appendChild(db); list.appendChild(d);
+    });
+    if (!list.firstChild) list.appendChild(el("p", "tiny", "None yet. Change the numbers above, name it, tap Save."));
+  }
+  $("scnSave").addEventListener("click", function () {
+    var name = $("scnName").value.trim().replace(/[^\w .+&()\/-]/g, "");
+    if (!name) { toast("Give it a name first"); return; }
+    var snap = {}; C1.forEach(function (f) { snap[f[0]] = $("c1-" + f[0]).value; });
+    put("scn:" + name, { in: snap }); $("scnName").value = ""; renderScenarios(); toast("Saved " + name);
+  });
+  $("c1reset").addEventListener("click", function () {
+    if (!confirm("Put calculator 1 back to the defaults?")) return;
+    C1.forEach(function (f) { var i = $("c1-" + f[0]); i.value = f[2]; put(i.dataset.k, null); }); calcAll();
+  });
+
+  /* ---------- apply saved state to the page ---------- */
+  function applyState() {
+    document.querySelectorAll("[data-k]").forEach(function (e) {
+      var k = e.dataset.k;
+      if (e.type === "checkbox") { e.checked = !!get(k, false); return; }
+      if (e === document.activeElement) return;
+      e.value = String(get(k, e.dataset.def || ""));
+    });
+    document.querySelectorAll(".nb").forEach(function (b) { if (b._ta && b._ta.value.trim()) b._wrap.hidden = false; });
+    updateCounts(); refreshNoteDots(); calcAll(); renderScenarios();
+  }
+
+  /* ---------- copy / reset ---------- */
+  function copyText(text, okMsg) {
+    function fallback() {
+      var t = el("textarea"); t.value = text; t.style.position = "fixed"; t.style.opacity = "0"; document.body.appendChild(t); t.select();
+      try { document.execCommand("copy"); toast(okMsg); } catch (e) { toast("Copy failed, long-press to copy instead"); }
+      document.body.removeChild(t);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { toast(okMsg); }, fallback);
+    else fallback();
+  }
+  function exportText() {
+    var out = ["BALENO VIEWING - my notes", "2024 Suzuki Baleno 1.5 GLX manual, 47,294 km. Offer R215,000 all in (listed R229,200).", ""];
+    SECTIONS.forEach(function (s) {
+      out.push("== " + s.title.toUpperCase() + " =="); var n = 0;
+      s.items.forEach(function (it) {
+        if (it[0] === "h") { out.push("-- " + it[1]); return; }
+        if (it[0] === "p") { out.push(it[1]); return; }
+        n++; var id = s.id + "." + n;
+        if (it[0] === "n") { out.push(it[1]); var a = get("aft:" + id, ""); out.push("   " + (a ? a.replace(/\n/g, "\n   ") : "(blank)")); return; }
+        var on = get((it[0] === "w" ? "walk:" : "chk:") + id, false);
+        out.push((it[0] === "w" ? (on ? "[SAW THIS] " : "[ ] ") : (on ? "[x] " : "[ ] ")) + (it[0] === "q" ? "Q: " : "") + it[1]);
+        var nt = get("note:" + id, ""); if (nt) out.push("   > " + nt.replace(/\n/g, "\n     "));
+      });
+      var sn = get("sec:" + s.id, ""); if (sn) out.push("NOTES: " + sn);
+      out.push("");
+    });
+    return out.join("\n");
+  }
+  $("copyAll").addEventListener("click", function () { copyText(exportText(), "All notes copied"); });
+  $("resetAll").addEventListener("click", function () {
+    if (!confirm("Clear every tick and every note? Calculator numbers and scenarios are kept.")) return;
+    if (!confirm("Really clear them? This also clears them on your other devices when sync is on.")) return;
+    var now = Date.now();
+    Object.keys(state).forEach(function (k) { if (/^(chk|walk|note|sec|aft):/.test(k)) state[k] = { v: null, t: now }; });
+    persist(); applyState(); schedulePush(); toast("Cleared");
+  });
+
+  /* ---------- sync (Supabase RPC; table has no direct access, only passphrase-gated functions) ---------- */
+  var syncKey = "", pushT, busy = false, again = false;
+  try { syncKey = localStorage.getItem(LSK) || ""; } catch (e) {}
+  function pill(txt) { $("syncPill").textContent = txt; }
+  function msg(txt, bad) { var m = $("syncMsg"); m.textContent = txt || ""; m.className = "syncmsg" + (bad ? " bad" : ""); }
+  function showSyncUi() { $("syncOff").hidden = !!syncKey; $("syncOn2").hidden = !syncKey; if (!syncKey) pill("Saved on this device"); }
+  function rpc(fn, body) {
+    return fetch(SB_URL + "/rest/v1/rpc/" + fn, { method: "POST", headers: { "Content-Type": "application/json", apikey: SB_KEY }, body: JSON.stringify(body) })
+      .then(function (r) { return r.text().then(function (t) { if (!r.ok) throw new Error(r.status + " " + t.slice(0, 120)); return t ? JSON.parse(t) : null; }); });
+  }
+  function merge(remote) {
+    var changed = false;
+    Object.keys(remote || {}).forEach(function (k) {
+      var r = remote[k]; if (!r || typeof r.t !== "number") return;
+      if (!state[k] || r.t > state[k].t) { state[k] = r; changed = true; }
+    });
+    return changed;
+  }
+  function sync() {
+    if (!syncKey) return Promise.resolve();
+    if (busy) { again = true; return Promise.resolve(); }
+    busy = true; pill("Syncing...");
+    return rpc("carplanner_get", { p_key: syncKey })
+      .then(function (remote) { if (merge(remote)) { persist(); applyState(); } return rpc("carplanner_put", { p_key: syncKey, p_data: state }); })
+      .then(function () {
+        var d = new Date(); pill("Synced " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2));
+        msg("Synced. Phone and laptop with this passphrase now share everything.");
+      })
+      .catch(function (e) { pill("Offline: saved here"); msg("Could not sync (" + (e.message || e) + "). Your data is safe on this device and will retry.", true); })
+      .then(function () { busy = false; if (again) { again = false; schedulePush(); } });
+  }
+  function schedulePush() { if (!syncKey) return; pill("Saved here, syncing soon"); clearTimeout(pushT); pushT = setTimeout(sync, 1500); }
+  $("syncOn").addEventListener("click", function () {
+    var k = $("syncKey").value.trim();
+    if (k.length < 8) { msg("Use at least 8 characters.", true); return; }
+    syncKey = k; try { localStorage.setItem(LSK, k); } catch (e) {}
+    $("syncKey").value = ""; showSyncUi(); sync();
+  });
+  $("syncNow").addEventListener("click", sync);
+  $("syncStop").addEventListener("click", function () {
+    if (!confirm("Turn off sync on this device? Your data stays here and in the cloud.")) return;
+    syncKey = ""; try { localStorage.removeItem(LSK); } catch (e) {} showSyncUi(); msg("Sync is off on this device.");
+  });
+  $("syncPill").addEventListener("click", function () { var c = $("syncCard"); c.open = true; c.scrollIntoView({ behavior: "smooth", block: "center" }); });
+  window.addEventListener("online", sync);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) sync(); });
+
+  /* ---------- go ---------- */
+  applyState(); showSyncUi();
+  if (syncKey) sync();
+})();
+</script>
+</body>
+</html>

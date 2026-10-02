@@ -7,11 +7,15 @@ Static pages for buying a used car in South Africa.
 - **`kit.html`** — a field checklist. Listing screens, the hill test (Nm ÷ tonne), the mileage test (km ÷ year), questions to ask a dealer, drive-away costs, and what to confirm before signing.
 - **`index.html`** — a small landing page linking them.
 
-## No backend
+- **`baleno.html`** — the Monday viewing page for one specific car: tickable checklist, dealer questions with a note box under each, per-section notes, five live calculators (monthly cost and payoff with named scenarios, fee check, cash to drive away, km per year, hill test), copy-ready messages, and a "Copy all my notes" backup button.
 
-There is no server, database, build step or dependency. Four HTML files with inline CSS and vanilla JavaScript. The only external request is to Google Fonts.
+## Backend
 
-Everything you type is stored in your own browser via `localStorage` and never leaves the device. There is no account and nothing is transmitted anywhere.
+There is no build step or dependency. Five HTML files with inline CSS and vanilla JavaScript. The external requests are Google Fonts and, only on `baleno.html` and only if you turn sync on, Supabase.
+
+`model.html`, `paydown.html` and `kit.html` store everything in your own browser via `localStorage` and transmit nothing.
+
+`baleno.html` saves to `localStorage` first. If you enter a sync passphrase (8+ characters, same one on each device) it also syncs to the `say-yes-to-29` Supabase project so notes survive a cleared browser and follow you between phone and laptop. The data lives in one table, `public.carplanner_state`, which has row-level security on and no direct access; the page can only reach it through two functions, `carplanner_get` and `carplanner_put`, which look the row up by the SHA-256 hash of your passphrase. Anyone without the passphrase cannot read or write your notes. The publishable key in the page is meant to be public. There is no account system.
 
 ## Deploy
 

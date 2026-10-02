@@ -247,17 +247,8 @@
     <h3>Calc 2. Fee check</h3>
     <div class="card calc" id="c2">
       <div class="f"><label for="c2-fees">Fees Sam quotes (R)</label><input type="number" inputmode="decimal" step="any" id="c2-fees" data-k="in:c2-fees" data-def="11495"></div>
-      <table class="mini">
-        <tr><th>Item</th><th>Normal range</th></tr>
-        <tr><td>Government charges</td><td>about R1,500</td></tr>
-        <tr><td>Pre-delivery inspection</td><td>R1,000+</td></tr>
-        <tr><td>Roadworthy</td><td>R135 to R800</td></tr>
-        <tr><td>History / HPI check</td><td>R200 to R400</td></tr>
-        <tr><td>Delivery fuel</td><td>R300 to R500</td></tr>
-        <tr><td>Dealer admin (negotiable)</td><td>R0 to R3,600</td></tr>
-        <tr><td><b>Likely total</b></td><td><b>about R4,400</b></td></tr>
-        <tr><td><b>High end</b></td><td><b>about R8,800</b></td></tr>
-      </table>
+      <h3 style="margin-bottom:0">Normal ranges (editable)</h3>
+      <div id="c2rows"></div>
       <div class="res" id="c2out"></div>
       <p class="tiny" style="margin-top:.7rem">Fees cannot legally be financed, so they come out of the deposit.</p>
     </div>
@@ -727,6 +718,24 @@
     c3.appendChild(el("p", "tiny", "If Sam's fees are not waived they cannot legally be financed, so they come out of the deposit, not the loan.")).style.marginTop = ".7rem";
   })();
 
+  var C2 = [["Government charges",1500,1500],["Pre-delivery inspection",1000,1000],["Roadworthy",135,800],
+            ["History / HPI check",200,400],["Delivery fuel",300,500],["Dealer admin (negotiable)",0,3600]];
+  (function () {
+    var box = $("c2rows");
+    C2.forEach(function (r, i) {
+      var d = el("div", "c3row"); d.appendChild(el("div", "lab", r[0]));
+      var two = el("div", "two"), a = el("div"), b = el("div");
+      a.appendChild(el("small", null, "Low")); a.appendChild(mkInput("c2-lo" + i, r[1]));
+      b.appendChild(el("small", null, "High")); b.appendChild(mkInput("c2-hi" + i, r[2]));
+      two.appendChild(a); two.appendChild(b); d.appendChild(two); box.appendChild(d);
+    });
+    [["tot","Likely total",4400],["high","High end",8800]].forEach(function (r) {
+      var d = el("div", "c3row"); d.appendChild(el("div", "lab", r[1]));
+      var two = el("div", "two"), a = el("div"); a.appendChild(mkInput("c2-" + r[0], r[2])); two.appendChild(a); d.appendChild(two); box.appendChild(d);
+    });
+    box.appendChild(el("p", "tiny", "The sum of the lows and highs above is shown under the verdict, so you can see whether your likely total and high end still make sense.")).style.marginTop = ".6rem";
+  })();
+
   ["c2-fees", "c4-odo", "c5-nm", "c5-kg"].forEach(function (id) {
     var i = $(id); i.addEventListener("input", function () { put(i.dataset.k, i.value); calcAll(); });
   });
@@ -783,11 +792,13 @@
       t.appendChild(tr);
     });
 
-    var f = n("c2-fees"), msg, cls = "";
-    if (f > 8800) { msg = R(f) + " is above the high end (by " + R(f - 8800) + ")"; cls = "neg"; }
-    else if (f > 4400) { msg = R(f) + " is above the likely total but within the high end"; }
+    var f = n("c2-fees"), tot = n("c2-tot"), hi = n("c2-high"), msg, cls = "", sl = 0, sh = 0;
+    C2.forEach(function (r, i) { sl += n("c2-lo" + i); sh += n("c2-hi" + i); });
+    if (f > hi) { msg = R(f) + " is above the high end (by " + R(f - hi) + ")"; cls = "neg"; }
+    else if (f > tot) { msg = R(f) + " is above the likely total but within the high end"; }
     else { msg = R(f) + " is at or below the likely total"; cls = "pos"; }
-    fill($("c2out"), [row("big " + cls, "Verdict", msg), row("", "Likely total", "about R4,400"), row("", "High end", "about R8,800")]);
+    fill($("c2out"), [row("big " + cls, "Verdict", msg), row("", "Likely total", "about " + R(tot)), row("", "High end", "about " + R(hi)),
+      row("", "Sum of the ranges above", R(sl) + " to " + R(sh))]);
 
     var sa = 0, sw = 0; C3.forEach(function (r, i) { sa += n("c3-a" + i); sw += n("c3-w" + i); });
     $("c3drivea").textContent = R(sa); $("c3drivew").textContent = R(sw);

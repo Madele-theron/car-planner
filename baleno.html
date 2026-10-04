@@ -571,17 +571,17 @@
   ];
 
   var C3 = [
-    ["DEKRA/AA inspection",1000,1500,"unsure, get a quote"],
-    ["Bank initiation fee",0,1208,"cap R1,207.50 incl VAT; as agreed it is added to the loan"],
+    ["DEKRA/AA inspection",1500,1500,"unsure, get a quote"],
+    ["Bank initiation fee",1208,1208,"cap R1,207.50 incl VAT; counted here in case it is not added to the loan"],
     ["Dealer fees (admin, licensing, registration, smash-and-grab)",0,11495,"not in writing"],
-    ["Number plates",0,500,"UNSURE: R350+ in 2023, no 2026 price; may not need new plates"],
+    ["Number plates",500,500,"UNSURE: R350+ in 2023, no 2026 price; may not need new plates"],
     ["Change of ownership / registration",0,0,"worst case: included in the dealer fees above (government cap R330)"],
     ["Licence disc",0,0,"worst case: included above (ask when the current disc expires)"],
-    ["Roadworthy",0,0,"Sam's process includes it; if separate R135 municipal, R500-R800 private; unsure who pays"],
+    ["Roadworthy",0,800,"Sam's process includes it; if separate R135 municipal, R500-R800 private; unsure who pays"],
     ["Delivery",0,0,""],
-    ["First month's insurance",1106,1349,""],
+    ["First month's insurance",1349,1349,""],
     ["Tracker installation",0,0,"Baleno needs none"],
-    ["First full tank",0,980,"37 L at R26.49; ask Sam to hand it over full"]
+    ["First full tank",980,980,"37 L at R26.49; ask Sam to hand it over full"]
   ];
 
   /* ---------- tiny helpers ---------- */
@@ -708,7 +708,7 @@
       var a = el("div", "v"), b = el("div", "v"); a.id = id + "a"; b.id = id + "w"; d.appendChild(a); d.appendChild(b); c3.appendChild(d);
     }
     tot("c3drive", "To physically drive away", true);
-    [["buf","Insurance excess buffer (hold it, do not spend it)",5000,6560],["con","First six weeks contingency (my estimate)",3000,5000]].forEach(function (r) {
+    [["buf","Insurance excess buffer (hold it, do not spend it)",6560,6560],["con","First six weeks contingency (my estimate)",3000,5000]].forEach(function (r) {
       var d = el("div", "c3row"); d.appendChild(el("div", "lab", r[1]));
       var two = el("div", "two"), a = el("div"), b = el("div");
       a.appendChild(el("small", null, "As agreed")); a.appendChild(mkInput("c3-" + r[0] + "a", r[2]));

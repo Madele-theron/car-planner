@@ -433,7 +433,9 @@
       ["q","No balloon, no residual"],
       ["q","If I pay off the financing early, is there a penalty or early-settlement fee?"],
       ["q","If I pay a lump sum every 6 months, is there a fee? Does each extra payment reduce my balance immediately, or must I phone to recalculate? (Sam said I must phone. Get this in writing.)"],
-      ["q","Can I choose the debit order date?"],
+      ["q","What is the exact date of my first instalment debit? (Collected in October, I expect early November; confirm it is not October.)"],
+      ["q","Can I choose the debit order date, and can it be just after payday?"],
+      ["q","Is any pro-rata interest charged between payout and the first instalment, and does it make the first instalment bigger?"],
       ["q","Do I need credit shortfall insurance?"],
       ["q","Is the price the same if I use their finance as with my own?"],
       ["h","Process"],
@@ -530,6 +532,8 @@
     ]},
     { id:"12", nav:"At the desk", title:"12. At the desk (only after the inspection passes)", intro:"Not Monday. This is for the day it actually gets to numbers.", items:[
       ["c","Pre-approval letter in hand BEFORE talking numbers (a fast, certain buyer with a big deposit is worth money to them)"],
+      ["c","Leveraged my deposit up front. Say to the F&I manager: \"I am putting down over 40% in cash (R86,900 on R215,000), which is very low risk for the bank. I expect an offer close to prime (10.75%). Please ask the credit managers to match or improve their spreads.\""],
+      ["c","Told them to drop the Dealer Interest Commission (DIC): dealers can adjust their commission margin on the rate. If the offer comes back high, I only proceed if they shave margin off the rate."],
       ["c","Asked for money off the price, not extras thrown in"],
       ["c","Asked what the admin fee covers, and asked them to drop it"],
       ["c","Declined paint protection and dent cover"],
@@ -546,6 +550,7 @@
       ["c","Read the total cost of credit figure on the quote (it is what the car really costs)"],
       ["c","Know whether the R69 to R80 monthly service fee is inside or outside the instalment"],
       ["c","Credit life insurance: is it bundled? What does it cost? (I believe it is not compulsory)"],
+      ["c","First debit date confirmed in writing (November, not October), and no pro-rata interest surprise on the first instalment"],
       ["c","Instalment debit order date chosen; the extra R2,000 I pay myself, never as a debit order"]
     ]}
   ];
@@ -572,17 +577,17 @@
   ];
 
   var C3 = [
-    ["DEKRA/AA inspection",1000,1500,"unsure, get a quote"],
-    ["Bank initiation fee",0,1208,"cap R1,207.50 incl VAT; as agreed it is added to the loan"],
+    ["DEKRA/AA inspection",1500,1500,"unsure, get a quote"],
+    ["Bank initiation fee",1208,1208,"cap R1,207.50 incl VAT; counted here in case it is not added to the loan"],
     ["Dealer fees (admin, licensing, registration, smash-and-grab)",0,11495,"not in writing"],
-    ["Number plates",0,500,"UNSURE: R350+ in 2023, no 2026 price; may not need new plates"],
+    ["Number plates",500,500,"UNSURE: R350+ in 2023, no 2026 price; may not need new plates"],
     ["Change of ownership / registration",0,0,"worst case: included in the dealer fees above (government cap R330)"],
     ["Licence disc",0,0,"worst case: included above (ask when the current disc expires)"],
-    ["Roadworthy",0,0,"Sam's process includes it; if separate R135 municipal, R500-R800 private; unsure who pays"],
+    ["Roadworthy",0,800,"Sam's process includes it; if separate R135 municipal, R500-R800 private; unsure who pays"],
     ["Delivery",0,0,""],
-    ["First month's insurance",1106,1349,""],
+    ["First month's insurance",1349,1349,""],
     ["Tracker installation",0,0,"Baleno needs none"],
-    ["First full tank",0,980,"37 L at R26.49; ask Sam to hand it over full"]
+    ["First full tank",980,980,"37 L at R26.49; ask Sam to hand it over full"]
   ];
 
   /* ---------- tiny helpers ---------- */
@@ -709,7 +714,7 @@
       var a = el("div", "v"), b = el("div", "v"); a.id = id + "a"; b.id = id + "w"; d.appendChild(a); d.appendChild(b); c3.appendChild(d);
     }
     tot("c3drive", "To physically drive away", true);
-    [["buf","Insurance excess buffer (hold it, do not spend it)",5000,6560],["con","First six weeks contingency (my estimate)",3000,5000]].forEach(function (r) {
+    [["buf","Insurance excess buffer (hold it, do not spend it)",6560,6560],["con","First six weeks contingency (my estimate)",3000,5000]].forEach(function (r) {
       var d = el("div", "c3row"); d.appendChild(el("div", "lab", r[1]));
       var two = el("div", "two"), a = el("div"), b = el("div");
       a.appendChild(el("small", null, "As agreed")); a.appendChild(mkInput("c3-" + r[0] + "a", r[2]));

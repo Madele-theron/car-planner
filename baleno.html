@@ -47,7 +47,8 @@
   a { color:var(--accent); }
 
   /* sticky bar */
-  .bar { position:sticky; top:0; z-index:30; background:var(--accent); color:var(--accent-ink); }
+  .top { position:sticky; top:0; z-index:30; }
+  .bar { background:var(--accent); color:var(--accent-ink); }
   .bar-in { max-width:46rem; margin:0 auto; padding:.5rem 1rem; display:flex; align-items:center; gap:.6rem; }
   .bar a.back { color:var(--accent-ink); text-decoration:none; font-weight:600; font-size:.9rem; }
   .bar .prog { font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:.72rem; letter-spacing:.04em; margin-left:auto; white-space:nowrap; }
@@ -174,12 +175,14 @@
 </head>
 <body>
 
+<div class="top">
 <div class="bar"><div class="bar-in">
-  <a class="back" href="kit.html">&larr; Kit</a>
+  <a class="back" href="index.html">&larr; Planner</a>
   <button class="pill" id="syncPill" type="button">Saved on this device</button>
   <span class="prog" id="prog">0/0</span>
 </div></div>
 <nav class="chips" aria-label="Sections"><div class="chips-in" id="chips"></div></nav>
+</div>
 
 <div class="wrap">
   <header class="mast">

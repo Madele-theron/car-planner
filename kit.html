@@ -934,6 +934,7 @@
 
   function save(state) {
     try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* private mode, blocked storage */ }
+    if (window.CarSync) CarSync.touch("kit");
   }
 
   var state = load();
@@ -1051,5 +1052,6 @@
 })();
 </script>
 
+<script src="sync.js"></script>
 </body>
 </html>

@@ -11,11 +11,11 @@ Static pages for buying a used car in South Africa.
 
 ## Backend
 
-There is no build step or dependency. Five HTML files with inline CSS and vanilla JavaScript. The external requests are Google Fonts and, only on `baleno.html` and only if you turn sync on, Supabase.
+There is no build step or dependency. Six HTML files and one small shared script (`sync.js`) with inline CSS and vanilla JavaScript. The external requests are Google Fonts and, only if you turn sync on, Supabase.
 
-`model.html`, `paydown.html` and `kit.html` store everything in your own browser via `localStorage` and transmit nothing.
+Every page saves to `localStorage` first. Sync is off until you enter a passphrase.
 
-`baleno.html` saves to `localStorage` first. If you enter a sync passphrase (8+ characters, same one on each device) it also syncs to the `say-yes-to-29` Supabase project so notes survive a cleared browser and follow you between phone and laptop. The data lives in one table, `public.carplanner_state`, which has row-level security on and no direct access; the page can only reach it through two functions, `carplanner_get` and `carplanner_put`, which look the row up by the SHA-256 hash of your passphrase. Anyone without the passphrase cannot read or write your notes. The publishable key in the page is meant to be public. There is no account system.
+If you enter a sync passphrase (on any page; it is shared across them), all of `baleno.html`, `kit.html`, `model.html` and `paydown.html` sync automatically from then on. Pages open with the newest copy, and changes are pushed a moment after you make them. The passphrase is 8+ characters, the same one on each device, and the data goes to the `say-yes-to-29` Supabase project so it survives a cleared browser and follow you between phone and laptop. The data lives in one table, `public.carplanner_state`, which has row-level security on and no direct access; the page can only reach it through two functions, `carplanner_get` and `carplanner_put`, which look the row up by the SHA-256 hash of your passphrase. Anyone without the passphrase cannot read or write your notes. The publishable key in the page is meant to be public. There is no account system.
 
 ## Deploy
 

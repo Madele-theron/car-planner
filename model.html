@@ -489,6 +489,7 @@
   }
   function save(){
     try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    if (window.CarSync) CarSync.touch("model");
   }
   load();
 
@@ -800,5 +801,6 @@
 })();
 </script>
 
+<script src="sync.js"></script>
 </body>
 </html>

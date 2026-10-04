@@ -381,10 +381,10 @@
         <div class="ctrl" style="grid-column: 1 / -1">
           <label class="k">Loan type</label>
           <div class="seg" id="prod">
-            <button type="button" data-prod="loan" aria-pressed="true">Personal loan — credit life R3/R1 000</button>
-            <button type="button" data-prod="vaf" aria-pressed="false">Vehicle finance — no credit life</button>
+            <button type="button" data-prod="vaf" aria-pressed="true">Vehicle finance — no credit life</button>
+            <button type="button" data-prod="loan" aria-pressed="false">With optional credit life — R3/R1 000</button>
           </div>
-          <p class="hint">A personal loan usually carries credit life; secured vehicle finance usually does not.</p>
+          <p class="hint">Standard bank vehicle finance (WesBank and the like) has no credit life in the instalment; it is an optional add-on. Switch it on only if your quote includes it.</p>
         </div>
       </div>
     </div>
@@ -429,7 +429,7 @@
         <div class="tip" id="tip"></div>
       </div>
       <div class="legend">
-        <span><i class="swatch" style="background:var(--s-loan)"></i> Personal loan (credit life)</span>
+        <span><i class="swatch" style="background:var(--s-loan)"></i> With optional credit life</span>
         <span><i class="swatch" style="background:var(--s-vaf)"></i> Vehicle finance (no credit life)</span>
       </div>
     </figure>
@@ -456,7 +456,7 @@
   </section>
 
   <footer>
-    <p>Calibrated against a real South African bank estimate: 13.40% over 72 months with credit life at R3 per R1,000 of outstanding balance. The initiation fee of R1,207.50 is added to the loan and the R69 monthly service fee is included in every instalment. Credit life is charged on the balance, so it falls as you pay down — which is why paying more than the minimum helps twice.</p>
+    <p>Calibrated against a real South African bank estimate at 13.40% over 72 months. Standard bank vehicle finance has no credit life (WesBank lists it as an optional extra), so the default here has none; the optional-credit-life route is modelled at R3 per R1,000 of outstanding balance. The initiation fee of R1,207.50 is added to the loan and the R69 monthly service fee is included in every instalment. Credit life is charged on the balance, so it falls as you pay down — which is why paying more than the minimum helps twice.</p>
   </footer>
 </div>
 
@@ -471,7 +471,7 @@
   var MN = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
   var DEFAULTS = { cash:85000, contrib:6000, raid:2000, price:190000, setup:14000,
-                   rate:13.4, pay:3000, salary:30000, prod:"loan", sel:3 };
+                   rate:13.4, pay:3000, salary:30000, prod:"vaf", sel:3, ver:2 };
   var state = {};
   for (var k in DEFAULTS) { state[k] = DEFAULTS[k]; }
 
@@ -483,6 +483,8 @@
       for (var k in DEFAULTS) {
         if (Object.prototype.hasOwnProperty.call(saved, k)) { state[k] = saved[k]; }
       }
+      // Before v2 the page defaulted to credit life; plain vehicle finance has none.
+      if (saved.ver !== 2) { state.prod = "vaf"; state.ver = 2; }
     } catch (e) { /* private mode or blocked storage */ }
   }
   function save(){
@@ -722,7 +724,7 @@
     if (a0.po.ok && b0.po.ok && a0.loan > 0){
       cn.innerHTML = "<strong>The gap between the two lines is the credit life premium.</strong> In " +
         LONG[state.sel] + " it is worth <strong>" + R(a0.po.cost - b0.po.cost) +
-        "</strong> — which is what asking for secured vehicle finance instead of a personal loan is worth to you.";
+        "</strong> — which is what declining optional credit life saves you.";
     } else {
       cn.innerHTML = "<strong>Lines stop where a route becomes impossible</strong> — that is a month where the minimum instalment is more than you are paying.";
     }

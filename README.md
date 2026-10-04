@@ -2,8 +2,8 @@
 
 Static pages for buying a used car in South Africa.
 
-- **`model.html`** — a live finance model. Drag your cash, monthly saving, Uber drain, car price, drive-away costs, interest rate and monthly payment, and see every purchase month's loan, minimum instalment, headroom, payoff period and total cost of credit at once. Compares a personal loan (with credit life at R3 per R1,000 of outstanding balance) against secured vehicle finance side by side.
-- **`paydown.html`** — a debt paydown model. Once you have the loan, drag the extra you pay each month (and any lump sum) and watch the interest, the term and the debt-free date move. Breaks the cost of credit into interest, credit life, service fees and initiation, plots the falling balance against the minimum-only case, and lays out a ladder of extra amounts side by side.
+- **`model.html`** — a live finance model. Drag your cash, monthly saving, Uber drain, car price, drive-away costs, interest rate and monthly payment, and see every purchase month's loan, minimum instalment, headroom, payoff period and total cost of credit at once. Compares vehicle finance with no credit life (the default) against the same loan with optional credit life at R3 per R1,000 of outstanding balance, side by side.
+- **`paydown.html`** — a debt paydown model. Once you have the loan (no credit life by default), drag the extra you pay each month (and any lump sum) and watch the interest, the term and the debt-free date move. Breaks the cost of credit into interest, credit life, service fees and initiation, plots the falling balance against the minimum-only case, and lays out a ladder of extra amounts side by side.
 - **`kit.html`** — a field checklist. Listing screens, the hill test (Nm ÷ tonne), the mileage test (km ÷ year), questions to ask a dealer, drive-away costs, and what to confirm before signing.
 - **`index.html`** — a small landing page linking them.
 
@@ -71,5 +71,7 @@ The instalment model is calibrated against real South African bank estimates at 
 - credit life at R3 per R1,000 of outstanding balance, which falls as the balance does
 
 Because credit life scales with the balance, it behaves exactly like extra interest — roughly 3.6% a year on top of the quoted rate. That is why the two lines on the chart diverge, and why the toggle matters.
+
+Credit life is an optional extra on bank vehicle finance (WesBank lists it as one), not part of a standard instalment, so `model.html` and `paydown.html` default to **no credit life**; the toggle adds it back for a quote that includes it. Early settlement: no penalty under R250,000; on R250,000 or more the bank may charge up to 90 days' interest on the remaining capital, reduced by any notice given.
 
 Rates, fees and caps change. Confirm the current prime rate, the NCA initiation fee cap and provincial registration costs before relying on any of it.
